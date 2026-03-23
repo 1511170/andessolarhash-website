@@ -123,30 +123,6 @@ try {
 ---
 
 <Layout title="Andes Solar Hash | Minería de Bitcoin en Chile">
-  <!-- TICKER BAR -->
-  <div class="ticker-bar">
-    <div class="ticker-item">
-      <span class="ticker-label">BTC/USD</span>
-      <span class="ticker-value" id="btc-price">$84,532.00</span>
-    </div>
-    <div class="ticker-item">
-      <span class="ticker-label">24h</span>
-      <span class="ticker-value ticker-up">+2.34%</span>
-    </div>
-    <div class="ticker-item">
-      <span class="ticker-label">HASHRATE</span>
-      <span class="ticker-value">612.5 EH/s</span>
-    </div>
-    <div class="ticker-item">
-      <span class="ticker-label">DIFICULTAD</span>
-      <span class="ticker-value">83.7 T</span>
-    </div>
-    <div class="ticker-item">
-      <span class="ticker-label">PRÓXIMO HALVING</span>
-      <span class="ticker-value">~120 días</span>
-    </div>
-  </div>
-
   <!-- HERO SECTION -->
   <Hero
     title="Minería de\nBitcoin con\nsoporte local en\nChile."
@@ -279,42 +255,6 @@ try {
   </section>
 
   <style>
-    /* TICKER BAR */
-    .ticker-bar {
-      background: #000;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      padding: 8px 16px;
-      display: flex;
-      gap: 40px;
-      font-family: 'Inter', sans-serif;
-      font-size: 12px;
-      letter-spacing: 1.2px;
-      white-space: nowrap;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .ticker-bar::-webkit-scrollbar {
-      display: none;
-    }
-    .ticker-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .ticker-label {
-      color: var(--gold);
-    }
-    .ticker-value {
-      color: white;
-      font-weight: 700;
-    }
-    .ticker-up {
-      color: #22c55e;
-    }
-    .ticker-down {
-      color: #ef4444;
-    }
-
     /* HERO SECTION */
     .hero {
       position: relative;
@@ -790,29 +730,7 @@ try {
       .news-grid { grid-template-columns: 1fr; }
       .newsletter { padding: 40px 20px; }
       .newsletter form { flex-direction: column; }
-      .ticker-bar { gap: 24px; padding: 8px 12px; }
     }
   </style>
 
-  <script>
-    // Actualizar precio BTC cada 30 segundos
-    async function updateBTCPrice() {
-      try {
-        const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true');
-        const data = await response.json();
-        const btc = data.bitcoin;
-        
-        const priceEl = document.getElementById('btc-price');
-        if (priceEl && btc.usd) {
-          priceEl.textContent = '$' + btc.usd.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-        }
-      } catch (e) {
-        console.log('Error fetching BTC price:', e);
-      }
-    }
-    
-    // Actualizar al cargar y cada 30 segundos
-    updateBTCPrice();
-    setInterval(updateBTCPrice, 30000);
-  </script>
 </Layout>
