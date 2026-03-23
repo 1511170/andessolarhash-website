@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductFichaAnchorNav from '../../components/ProductFichaAnchorNav.astro';
+import '../../styles/product-ficha.css';
+import bodyHtml from '../../ficha-bodies/s21-pro.html?raw';
+---
+
+<Layout
+  title="Bitcoin Miner S21 Pro – Andes Solar Hash"
+  description="Antminer S21 Pro: ficha técnica, gráficos de performance y enlace de compra. Andes Solar Hash."
+>
+  <div class="ash-ficha" set:html={bodyHtml} />
+  <ProductFichaAnchorNav />
+</Layout>

@@ -1,0 +1,188 @@
+/* =====================================================
+   ANDES SOLAR HASH - Utility Classes
+   ===================================================== */
+
+/* Hero Section Utilities */
+.hero {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  padding: 120px 80px 80px;
+  overflow: hidden;
+  background: var(--color-bg-deep);
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--color-bg-mid) 25%, rgba(16, 20, 41, 0) 65%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--color-gold);
+  border-radius: 9999px;
+  padding: 5px 13px;
+  margin-bottom: 24px;
+}
+
+.hero-badge-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-gold);
+  border-radius: 50%;
+}
+
+.hero-badge-text {
+  font-family: var(--font-family-sans);
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--color-gold);
+  letter-spacing: 0.5px;
+}
+
+.hero h1 {
+  font-family: var(--font-family-display);
+  font-weight: 900;
+  font-size: clamp(48px, 5vw, 72px);
+  line-height: 1.05;
+  color: #f7ad1f;
+  -webkit-text-fill-color: #f7ad1f;
+  margin-bottom: 28px;
+}
+
+.hero-sub {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  padding: 96px 80px 60px;
+  background: var(--color-bg-deep);
+}
+
+.intro h2 {
+  font-family: var(--font-family-display);
+  font-weight: 900;
+  font-size: clamp(28px, 3vw, 36px);
+  text-transform: uppercase;
+  color: #f7ad1f;
+  -webkit-text-fill-color: #f7ad1f;
+  margin-bottom: 24px;
+  line-height: 1.15;
+}
+
+.intro p {
+  color: var(--color-text-light);
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 0 auto 16px;
+}
+
+.intro p.bold {
+  color: white;
+  font-weight: 700;
+}
+
+/* CTA Notes */
+.cta-note {
+  font-size: 13px;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.cta-note-orange {
+  font-size: 14px;
+  color: #ccc;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* Responsive Utilities */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 40px 60px;
+  }
+
+  .intro {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    padding: 100px 20px 60px;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-outline,
+  .btn-solid {
+    width: 100%;
+    justify-content: center;
+    font-size: 13px;
+  }
+
+  .intro {
+    padding: 48px 20px 32px;
+  }
+
+  .intro h2 {
+    font-size: 22px;
+  }
+
+  .intro p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,666 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lastUpdated = '17 de marzo de 2026';
+
+const cookiesTable = [
+  {
+    name: 'ash_session',
+    type: 'Esencial',
+    provider: 'Andes Solar Hash',
+    purpose: 'Mantiene la sesión del usuario activa durante la navegación',
+    duration: 'Sesión'
+  },
+  {
+    name: 'ash_consent',
+    type: 'Esencial',
+    provider: 'Andes Solar Hash',
+    purpose: 'Almacena las preferencias de consentimiento de cookies',
+    duration: '1 año'
+  },
+  {
+    name: '_ga',
+    type: 'Analítica',
+    provider: 'Google Analytics',
+    purpose: 'Distingue usuarios únicos para estadísticas de uso',
+    duration: '2 años'
+  },
+  {
+    name: '_gid',
+    type: 'Analítica',
+    provider: 'Google Analytics',
+    purpose: 'Distingue usuarios para estadísticas de sesión',
+    duration: '24 horas'
+  },
+  {
+    name: '_gat',
+    type: 'Analítica',
+    provider: 'Google Analytics',
+    purpose: 'Limita la frecuencia de solicitudes',
+    duration: '1 minuto'
+  },
+  {
+    name: '_fbp',
+    type: 'Marketing',
+    provider: 'Meta/Facebook',
+    purpose: 'Entrega anuncios personalizados y mide su efectividad',
+    duration: '3 meses'
+  },
+  {
+    name: 'fr',
+    type: 'Marketing',
+    provider: 'Meta/Facebook',
+    purpose: 'Personaliza publicidad en Facebook e Instagram',
+    duration: '3 meses'
+  },
+  {
+    name: 'li_sugr',
+    type: 'Marketing',
+    provider: 'LinkedIn',
+    purpose: 'Realiza seguimiento de conversiones de LinkedIn',
+    duration: '3 meses'
+  }
+];
+---
+
+<Layout 
+  title="Política de Cookies | Andes Solar Hash"
+  description="Política de cookies de Andes Solar Hash. Conoce qué cookies utilizamos y cómo gestionar tus preferencias."
+>
+  <div class="legal-page">
+    <!-- Hero Section -->
+    <section class="legal-hero">
+      <div class="legal-hero-content">
+        <div class="hero-badge">
+          <div class="hero-badge-dot"></div>
+          <span class="hero-badge-text">DOCUMENTO LEGAL</span>
+        </div>
+        <h1>Política de Cookies</h1>
+        <p class="last-updated">Última actualización: {lastUpdated}</p>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="legal-content">
+      <div class="legal-container">
+        <!-- ¿Qué son las cookies? -->
+        <article class="legal-section">
+          <h2>1. ¿Qué son las cookies?</h2>
+          <p>Las cookies son pequeños archivos de texto que se almacenan en su dispositivo (computadora, tablet o móvil) cuando visita un sitio web. Estas cookies permiten que el sitio reconozca su dispositivo y recopile información sobre su navegación.</p>
+          <p>Las cookies cumplen diversas funciones, como permitirle navegar eficientemente entre páginas, recordar sus preferencias y mejorar su experiencia general de usuario. También nos ayudan a comprender cómo interactúa con nuestro sitio web para poder mejorarlo continuamente.</p>
+          <p>Además de las cookies, utilizamos tecnologías similares como localStorage, sessionStorage y píxeles de seguimiento que cumplen funciones similares.</p>
+        </article>
+
+        <!-- Tipos de cookies -->
+        <article class="legal-section">
+          <h2>2. Tipos de cookies que usamos</h2>
+          
+          <div class="cookie-type">
+            <div class="cookie-type-header">
+              <span class="cookie-badge essential">Esenciales</span>
+              <h3>Cookies Esenciales</h3>
+            </div>
+            <p>Estas cookies son necesarias para que el sitio web funcione correctamente. No pueden desactivarse en nuestros sistemas. Generalmente se establecen solo en respuesta a acciones realizadas por usted, como establecer sus preferencias de privacidad, iniciar sesión o completar formularios.</p>
+            <ul>
+              <li>Mantener su sesión de usuario activa</li>
+              <li>Recordar sus preferencias de consentimiento</li>
+              <li>Proteger la seguridad del sitio</li>
+              <li>Recordar artículos en el carrito de compras</li>
+            </ul>
+          </div>
+
+          <div class="cookie-type">
+            <div class="cookie-type-header">
+              <span class="cookie-badge analytics">Analíticas</span>
+              <h3>Cookies Analíticas</h3>
+            </div>
+            <p>Estas cookies nos permiten contar las visitas y fuentes de tráfico para poder medir y mejorar el rendimiento de nuestro sitio. Nos ayudan a saber qué páginas son las más y menos populares y a ver cómo se mueven los visitantes por el sitio.</p>
+            <ul>
+              <li>Analizar el tráfico del sitio web</li>
+              <li>Identificar páginas con problemas de rendimiento</li>
+              <li>Comprender el comportamiento de navegación</li>
+              <li>Mejorar la estructura del sitio</li>
+            </ul>
+          </div>
+
+          <div class="cookie-type">
+            <div class="cookie-type-header">
+              <span class="cookie-badge marketing">Marketing</span>
+              <h3>Cookies de Marketing</h3>
+            </div>
+            <p>Estas cookies pueden ser establecidas a través de nuestro sitio por nuestros socios publicitarios. Pueden ser utilizadas por esas empresas para crear un perfil de sus intereses y mostrarle anuncios relevantes en otros sitios.</p>
+            <ul>
+              <li>Mostrar anuncios personalizados</li>
+              <li>Medir la efectividad de campañas publicitarias</li>
+              <li>Evitar mostrar anuncios repetidos</li>
+              <li>Integración con redes sociales</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Cómo gestionar cookies -->
+        <article class="legal-section">
+          <h2>3. Cómo gestionar cookies</h2>
+          <p>Usted tiene el control sobre las cookies y puede gestionar sus preferencias de varias formas:</p>
+          
+          <h3>3.1 Preferencias en nuestro sitio</h3>
+          <p>Puede modificar sus preferencias de cookies en cualquier momento haciendo clic en el enlace "Configuración de Cookies" que se encuentra en el pie de página de nuestro sitio web.</p>
+
+          <h3>3.2 Configuración del navegador</h3>
+          <p>La mayoría de los navegadores web permiten controlar las cookies a través de sus preferencias de configuración. A continuación, encontrará enlaces a las instrucciones de los navegadores más populares:</p>
+          
+          <div class="browser-links">
+            <a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener noreferrer" class="browser-link">
+              <span>Google Chrome</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+            <a href="https://support.mozilla.org/kb/cookies-information-websites-store-on-your-computer" target="_blank" rel="noopener noreferrer" class="browser-link">
+              <span>Mozilla Firefox</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+            <a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471" target="_blank" rel="noopener noreferrer" class="browser-link">
+              <span>Safari</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+            <a href="https://support.microsoft.com/help/4027947/microsoft-edge-delete-cookies" target="_blank" rel="noopener noreferrer" class="browser-link">
+              <span>Microsoft Edge</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+
+          <h3>3.3 Herramientas de opt-out de terceros</h3>
+          <p>Puede optar por no recibir cookies de publicidad personalizada a través de las siguientes herramientas:</p>
+          <ul>
+            <li><strong>Google Analytics:</strong> <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Instalar complemento de inhabilitación</a></li>
+            <li><strong>Network Advertising Initiative:</strong> <a href="http://optout.networkadvertising.org/" target="_blank" rel="noopener noreferrer">Opt-out de publicidad personalizada</a></li>
+            <li><strong>Your Online Choices:</strong> <a href="https://www.youronlinechoices.com/" target="_blank" rel="noopener noreferrer">Gestionar preferencias de publicidad</a></li>
+          </ul>
+
+          <div class="info-box">
+            <strong>Nota importante:</strong> Si decide bloquear todas las cookies, incluidas las esenciales, es posible que algunas funciones de nuestro sitio web no funcionen correctamente.
+          </div>
+        </article>
+
+        <!-- Tabla de cookies -->
+        <article class="legal-section">
+          <h2>4. Tabla de cookies específicas</h2>
+          <p>A continuación, se detallan las cookies específicas que utilizamos en nuestro sitio web:</p>
+          
+          <div class="table-container">
+            <table class="cookies-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Tipo</th>
+                  <th>Proveedor</th>
+                  <th>Propósito</th>
+                  <th>Duración</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cookiesTable.map(cookie => (
+                  <tr>
+                    <td><code>{cookie.name}</code></td>
+                    <td>
+                      <span class={`badge-${cookie.type.toLowerCase()}`}>{cookie.type}</span>
+                    </td>
+                    <td>{cookie.provider}</td>
+                    <td>{cookie.purpose}</td>
+                    <td>{cookie.duration}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Cookies de terceros adicionales</h3>
+          <p>Algunos de nuestros socios y proveedores de servicios pueden establecer cookies adicionales. Estos incluyen:</p>
+          <ul>
+            <li><strong>Proveedores de pago:</strong> Flow, Khipu, MercadoPago (para procesar transacciones)</li>
+            <li><strong>Servicios de chat:</strong> Pueden establecer cookies para mantener el historial de conversaciones</li>
+            <li><strong>Integraciones de wallet:</strong> Servicios de conexión de billeteras de criptomonedas</li>
+          </ul>
+        </article>
+
+        <!-- Contacto -->
+        <article class="legal-section">
+          <h2>5. Contacto</h2>
+          <p>Si tiene preguntas sobre nuestra Política de Cookies o desea más información sobre cómo gestionamos estas tecnologías, puede contactarnos:</p>
+          
+          <div class="contact-box">
+            <p><strong>Correo electrónico:</strong> privacidad@andessolarhash.com</p>
+            <p><strong>Dirección:</strong> Manquehue Norte 151, Oficina 1205, Las Condes, Santiago, Chile</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="legal-footer">
+      <div class="legal-footer-content">
+        <a href="/" class="btn-back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15 10H5M5 10L9 6M5 10L9 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Volver al inicio
+        </a>
+        <p class="legal-disclaimer">
+          © {new Date().getFullYear()} Andes Solar Hash SpA. Todos los derechos reservados.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .legal-page {
+      background: var(--bg-deep);
+      min-height: 100vh;
+    }
+
+    /* Hero Section */
+    .legal-hero {
+      padding: 140px 80px 60px;
+      background: linear-gradient(to bottom, var(--bg-mid), var(--bg-deep));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--gold);
+      border-radius: 9999px;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .hero-badge-text {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 0.5px;
+    }
+
+    .legal-hero h1 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 900;
+      font-size: clamp(36px, 5vw, 56px);
+      background: linear-gradient(to right, var(--gold-dark), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .last-updated {
+      font-family: 'Archivo', sans-serif;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Content Section */
+    .legal-content {
+      padding: 60px 80px 80px;
+    }
+
+    .legal-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .legal-section {
+      margin-bottom: 48px;
+    }
+
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section h2 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: white;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .legal-section h3 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--gold);
+      margin: 24px 0 12px;
+    }
+
+    .legal-section p {
+      font-family: 'Archivo', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .legal-section ul li {
+      font-family: 'Archivo', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .legal-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .legal-section a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    .legal-section strong {
+      color: white;
+      font-weight: 600;
+    }
+
+    /* Cookie Type Cards */
+    .cookie-type {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .cookie-type-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .cookie-type h3 {
+      margin: 0;
+      font-size: 18px;
+      color: white;
+    }
+
+    .cookie-badge {
+      font-family: 'Archivo', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+
+    .cookie-badge.essential {
+      background: #10b981;
+      color: white;
+    }
+
+    .cookie-badge.analytics {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .cookie-badge.marketing {
+      background: #f59e0b;
+      color: white;
+    }
+
+    /* Browser Links */
+    .browser-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 20px 0;
+    }
+
+    .browser-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: var(--text-light);
+      text-decoration: none;
+      font-family: 'Archivo', sans-serif;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+
+    .browser-link:hover {
+      border-color: var(--gold);
+      color: white;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: rgba(247, 173, 31, 0.1);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-family: 'Archivo', sans-serif;
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* Table */
+    .table-container {
+      overflow-x: auto;
+      margin: 24px 0;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .cookies-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Archivo', sans-serif;
+      font-size: 14px;
+      background: var(--bg-card);
+    }
+
+    .cookies-table th {
+      background: var(--bg-mid);
+      color: white;
+      font-weight: 700;
+      text-align: left;
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: nowrap;
+    }
+
+    .cookies-table td {
+      padding: 14px 16px;
+      color: var(--text-light);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      vertical-align: top;
+    }
+
+    .cookies-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .cookies-table code {
+      background: var(--bg-deep);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--gold);
+    }
+
+    .badge-esencial,
+    .badge-analítica,
+    .badge-marketing {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .badge-esencial {
+      background: #10b981;
+      color: white;
+    }
+
+    .badge-analítica {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .badge-marketing {
+      background: #f59e0b;
+      color: white;
+    }
+
+    /* Contact Box */
+    .contact-box {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 20px 0;
+      border-left: 4px solid var(--gold);
+    }
+
+    .contact-box p {
+      margin-bottom: 8px;
+    }
+
+    .contact-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer Section */
+    .legal-footer {
+      padding: 40px 80px;
+      background: var(--bg-mid);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 1px solid var(--gold);
+      border-radius: 100px;
+      padding: 14px 28px;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--gold);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-back:hover {
+      background: var(--gold);
+      color: var(--bg-deep);
+    }
+
+    .btn-back:hover svg path {
+      stroke: var(--bg-deep);
+    }
+
+    .legal-disclaimer {
+      font-family: 'Archivo', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .legal-hero {
+        padding: 120px 20px 40px;
+      }
+
+      .legal-content {
+        padding: 40px 20px;
+      }
+
+      .legal-footer {
+        padding: 32px 20px;
+      }
+
+      .legal-section h2 {
+        font-size: 20px;
+      }
+
+      .legal-section h3 {
+        font-size: 16px;
+      }
+
+      .legal-section p,
+      .legal-section ul li {
+        font-size: 15px;
+      }
+
+      .browser-links {
+        grid-template-columns: 1fr;
+      }
+
+      .cookies-table {
+        font-size: 12px;
+      }
+
+      .cookies-table th,
+      .cookies-table td {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</Layout>
+

@@ -1,0 +1,870 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+/** Página NFT alineada a Figma (nodo 92:295) + galería completa tipo andessh/nft/index.html */
+
+const title = 'NFTs productivos | Andes Solar Hash';
+const description =
+  'NFTs basados en minería real de Bitcoin en Polygon: 100 Minero S21+, recompensas y colección en OpenSea.';
+
+const openSeaKey = import.meta.env.PUBLIC_OPENSEA_API_KEY ?? '';
+
+const imgHero = '/images/nft/figma/hero_grupo.png';
+/** Mockup wallet + pestaña NFTs (S21+ Andes) — figma_images/nft/02_colecciones/adfd0950…removebg-preview 2.png */
+const imgFeatPhone = '/images/nft/figma/feat_phone_nft_wallet.png';
+/** Mockup wallet BTC/POL — Figma (Photoroom), mismo asset que figma_images/nft/02_colecciones/… */
+const imgRewards = '/images/nft/figma/rewards_wallet_photoroom.png';
+const imgCollBlack = '/images/nft/figma/coll_black.png';
+const imgCollPanda = '/images/nft/figma/coll_panda.png';
+const imgCollRosa = '/images/nft/figma/coll_rosa.png';
+const imgCommunity = '/images/nft/figma/community.png';
+/** Logo Bitmain — figma_images/nft/04_elementos/image 5.png */
+const imgBitmainLogo = '/images/nft/figma/bitmain_logo.png';
+
+const openseaCollection = 'https://opensea.io/collection/minero-s21-andes-solarhash';
+---
+
+<Layout title={title} description={description}>
+  <!-- HERO — Figma -->
+  <section
+    class="relative pt-28 pb-14 md:pb-16 text-center overflow-hidden px-5 md:px-8"
+    style="background: linear-gradient(172deg, #1d2242 0%, #0b0d1b 50%);"
+  >
+    <div
+      class="absolute -top-[150px] left-1/2 -translate-x-1/2 w-[900px] h-[600px] pointer-events-none"
+      style="background: radial-gradient(ellipse at center, rgba(247,173,31,.12) 0%, transparent 65%);"
+      aria-hidden="true"
+    />
+    <div class="relative z-10 max-w-[1100px] mx-auto">
+      <div
+        class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-bold tracking-[0.14em] uppercase mb-5 border"
+        style="background: rgba(247,173,31,.08); border-color: rgba(247,173,31,.28); color: #f7ad1f;"
+      >
+        <span class="w-1.5 h-1.5 rounded-full bg-[#f7ad1f]" />
+        Colección Activa en Polygon · 100 NFTs
+      </div>
+      <div class="w-11 h-0.5 rounded mx-auto mb-5 bg-[#f7ad1f]" />
+      <h1
+        class="font-maven font-black text-[clamp(2rem,5.5vw,4.1rem)] leading-[1.06] max-w-[840px] mx-auto mb-4"
+        style="background: linear-gradient(135deg, #e08324, #f7ad1f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+      >
+        NFTs productivos basados en la minería de Bitcoin
+      </h1>
+      <p class="font-archivo text-base md:text-[17px] max-w-[620px] mx-auto mb-10 leading-relaxed text-white/50">
+        Accedé a un porcentaje de la producción minera real de nuestros equipos ASIC adquiriendo uno o más de nuestros
+        NFTs.
+      </p>
+      <div class="max-w-[700px] mx-auto">
+        <img
+          src={imgHero}
+          alt="NFTs Minero Andes Solar Hash"
+          class="w-full max-h-[400px] object-contain mx-auto drop-shadow-[0_24px_56px_rgba(247,173,31,.22)]"
+          loading="eager"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="py-8 md:py-9 px-5 md:px-8 border-y border-white/[0.07]" style="background: #0d1020;">
+    <div class="max-w-[1100px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-0">
+      {['Total NFTs', 'Precio Piso', 'Volumen Total', 'Titulares'].map((lbl, i) => (
+        <div
+          class:list={[
+            'text-center py-3 px-4 border-white/[0.07]',
+            i < 3 ? 'border-r max-md:[&:nth-child(2)]:border-r-0 md:border-r' : '',
+            i === 1 ? 'max-md:border-r-0' : '',
+            i === 2 ? 'max-md:border-t max-md:border-r md:border-t-0' : '',
+            i === 3 ? 'max-md:border-t' : '',
+          ]}
+        >
+          <span class="sv-val font-maven font-black text-2xl text-[#f7ad1f] block min-h-8" id={i === 0 ? 'sv1' : i === 1 ? 'sv2' : i === 2 ? 'sv3' : 'sv4'}>
+            <span class="inline-block w-[70px] h-[26px] rounded bg-[#f7ad1f]/[0.07] align-middle skel-v" />
+          </span>
+          <span class="text-[10px] text-white/30 uppercase tracking-[0.12em] mt-1 block">{lbl}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- FEATURE -->
+  <section class="py-16 md:py-[88px] px-5 md:px-8 bg-[#0b0d1b]">
+    <div class="max-w-[1280px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div>
+        <p class="text-[10px] font-bold tracking-[0.25em] text-[#f7ad1f] uppercase mb-4">NFT Productivo Respaldado</p>
+        <h2 class="font-maven font-black text-xl md:text-[26px] text-white uppercase leading-snug mb-3">
+          NFT productivo respaldado por minería real de Bitcoin
+        </h2>
+        <p class="text-sm text-white/50 leading-relaxed mb-3 italic">
+          Accede a una participación digital limitada asociada a infraestructura minera operativa.
+        </p>
+        <ul class="space-y-2.5 mb-5">
+          {[
+            'Activo digital limitado (100 NFTs)',
+            'Respaldo en equipos reales de minería',
+            'Trazabilidad y transparencia total en blockchain',
+            'Propiedad verificable en tu wallet',
+          ].map((t) => (
+            <li class="flex gap-2.5 text-sm text-white/75 items-start">
+              <span class="text-[#f7ad1f] font-bold shrink-0">✓</span>
+              {t}
+            </li>
+          ))}
+        </ul>
+
+        <div
+          class="rounded-[10px] p-4 md:p-5 mb-4 flex flex-wrap items-center justify-between gap-3 border"
+          style="background: rgba(247,173,31,.06); border-color: rgba(247,173,31,.22);"
+        >
+          <div>
+            <div class="text-[10px] font-bold tracking-[0.18em] text-white/50 uppercase mb-1">Precio por NFT</div>
+            <div class="flex flex-wrap items-baseline gap-2.5">
+              <span id="price-weth" class="font-maven font-black text-xl md:text-[22px] text-[#f7ad1f]">0.031 WETH</span>
+              <span id="price-weth-usd" class="font-archivo text-sm text-white/50">≈ cargando…</span>
+            </div>
+          </div>
+          <div class="text-right">
+            <div class="text-[10px] font-bold tracking-wide text-white/30 uppercase mb-0.5">Tasa en tiempo real</div>
+            <span id="weth-live-badge" class="text-[11px] font-bold text-white/50 font-maven">● Consultando…</span>
+            <div class="text-[9px] text-white/30 mt-0.5">vía CoinGecko · actualiza c/60s</div>
+          </div>
+        </div>
+
+        <div class="rounded-md p-5 md:p-[22px] mb-5 border border-white/[0.07] bg-[#111428]">
+          <div class="font-maven font-black text-[17px] text-white mb-1">
+            NFTs vendidos: <span id="soldCount">0</span> de <span id="totalCount">100</span>
+          </div>
+          <div class="h-3 rounded-full bg-white/10 overflow-hidden my-2.5">
+            <div class="h-full rounded-full prog-fill transition-[width] duration-[1.2s] ease-out" id="progressBar" style="width: 1%; background: linear-gradient(90deg, #e08324, #f7ad1f);" />
+          </div>
+          <div class="flex justify-between text-xs text-white/50">
+            <span id="soldPct">0%</span>
+            <span class="text-[#f7ad1f] font-maven font-bold">Disponibles: <span id="availCount">100</span></span>
+          </div>
+          <p class="text-[13px] text-white/50 mt-2.5 leading-relaxed">
+            Puedes adquirir uno o más NFTs, según disponibilidad al momento de la compra.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-2.5 mb-3">
+          <a
+            href={openseaCollection}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 min-h-[42px] px-5 rounded-lg bg-[#f7ad1f] text-[#0b0d1b] font-maven font-extrabold text-xs uppercase tracking-wide hover:bg-[#ffc44d] transition-all"
+          >
+            🛒 Comprar NFT
+          </a>
+          <a
+            href="#especificaciones"
+            class="inline-flex items-center justify-center gap-2 min-h-[42px] px-5 rounded-lg border-[1.5px] border-[#f7ad1f] text-white font-maven font-bold text-xs uppercase hover:bg-[#f7ad1f]/10 transition-all"
+          >
+            Ver ficha técnica
+          </a>
+        </div>
+        <p class="text-center md:text-left text-[13px] text-white/70">💳 Pago con tarjeta o MetaMask</p>
+      </div>
+      <div class="flex justify-center lg:justify-end order-first lg:order-none">
+        <img
+          src={imgFeatPhone}
+          alt="Wallet móvil con galería NFT Minero S21+ Andes Solar Hash"
+          class="max-w-[min(100%,420px)] w-full h-auto object-contain drop-shadow-[0_36px_72px_rgba(247,173,31,.22)]"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- REWARDS -->
+  <section
+    class="pt-8 md:pt-10 pb-0 px-5 md:px-8 overflow-hidden"
+    style="background: linear-gradient(90deg, #e08324, #f7ad1f);"
+  >
+    <div class="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-[minmax(280px,390px)_1fr] gap-10 md:gap-16 items-center">
+      <div class="flex justify-center items-end min-h-[260px] md:min-h-[320px] order-first md:order-none px-2">
+        <img
+          src={imgRewards}
+          alt="Wallet con recompensas en Bitcoin y Pol (POL) en Polygon"
+          class="max-w-[400px] w-full h-auto object-contain object-bottom translate-y-3 md:translate-y-[18px] drop-shadow-[0_20px_40px_rgba(0,0,0,.28)]"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      <div class="max-w-[560px] pb-8 md:pb-10 md:py-0">
+        <h2 class="font-maven font-black text-xl md:text-[clamp(1.25rem,2.8vw,2rem)] text-[#1d2242] uppercase leading-tight mb-4">
+          Recompensas diarias en BTC o en POL directamente a tu wallet
+        </h2>
+        <p class="text-[15px] text-[#0d1020]/78 leading-relaxed">
+          Cada NFT te da acceso a una fracción proporcional de los ingresos generados por la minería de Bitcoin con
+          equipos ASIC de última generación.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH / BITMAIN -->
+  <section id="especificaciones" class="py-10 md:py-11 px-5 md:px-8 bg-[#0b0d1b] border-b border-white/[0.07]">
+    <div class="max-w-[1100px] mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-6 text-center md:text-left">
+      <div class="font-maven font-black text-lg md:text-[clamp(1.1rem,2.2vw,1.65rem)] text-white uppercase leading-tight">
+        Trabajando con tecnología<br />
+        <span
+          class="not-italic"
+          style="background: linear-gradient(135deg, #e08324, #f7ad1f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+          >del más alto nivel</span
+        >
+      </div>
+      <div
+        class="mx-auto md:mx-0 bg-white rounded-2xl border border-white/10 px-6 py-3.5 flex items-center justify-center min-w-[170px]"
+      >
+        <img
+          src={imgBitmainLogo}
+          alt="Bitmain"
+          class="h-[42px] w-auto max-w-[220px] object-contain object-center"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="py-16 md:py-20 px-5 md:px-8 bg-[#0d1020]">
+    <div class="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
+      <div class="aspect-video rounded-xl overflow-hidden border border-white/[0.07] bg-[#111428]">
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube-nocookie.com/embed/1b-qzV6Mj0I?rel=0"
+          title="Andes Solar Hash - Video"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        />
+      </div>
+      <div>
+        <p class="text-[11px] font-bold tracking-[0.15em] text-red-500 uppercase mb-2.5">Andes Solar Hash</p>
+        <h3 class="font-maven font-bold text-lg md:text-2xl text-white mb-3.5 leading-tight">
+          Entiende el proyecto en pocos minutos
+        </h3>
+        <p class="font-archivo text-[14.5px] text-white/50 leading-relaxed mb-6">
+          Un resumen claro de cómo funcionan nuestros NFTs productivos y la infraestructura minera que respalda el
+          ecosistema.
+        </p>
+        <a
+          href="https://youtu.be/1b-qzV6Mj0I"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center min-h-[42px] px-5 rounded-lg bg-[#f7ad1f] text-[#0b0d1b] font-maven font-extrabold text-xs uppercase hover:bg-[#ffc44d] transition-all"
+        >
+          Ver video completo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="py-16 md:py-20 px-5 md:px-8 bg-[#0b0d1b]">
+    <div class="max-w-[1100px] mx-auto text-center mb-10 md:mb-11">
+      <h2
+        class="font-maven font-black text-xl md:text-[clamp(1.25rem,2.8vw,2.1rem)] uppercase mb-3 inline-block"
+        style="background: linear-gradient(135deg, #e08324, #f7ad1f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+      >
+        Colecciones Andes Solar Hash
+      </h2>
+      <p class="text-[15px] text-white/50 max-w-[680px] mx-auto leading-relaxed">
+        Explora la colección activa y conoce las próximas expansiones del ecosistema.
+      </p>
+    </div>
+    <div class="max-w-[1100px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="rounded-xl overflow-hidden border border-white/[0.07] bg-[#111428] hover:-translate-y-1 hover:border-[#f7ad1f]/30 transition-all">
+        <div class="aspect-[4/3] relative overflow-hidden bg-[#1d2242]">
+          <img src={imgCollBlack} alt="Black Edition" class="w-full h-full object-cover" loading="lazy" />
+          <span class="absolute top-2.5 right-2.5 text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-500/15 text-green-500 border border-green-500/30">Activo</span>
+        </div>
+        <div class="p-[18px]">
+          <h3 class="font-maven font-bold text-[15px] text-white mb-1">Minero S21+ | Black Edition</h3>
+          <p class="text-[13px] text-white/50 leading-snug mb-3.5">
+            100 NFTs con respaldo en equipos ASIC Bitmain Antminer S21+ operativos en Chile.
+          </p>
+          <a href={openseaCollection} target="_blank" rel="noopener noreferrer" class="block text-center rounded-full py-2 bg-[#f7ad1f] text-black font-maven font-bold text-xs hover:bg-[#ffc44d] transition-colors">
+            Ver en OpenSea →
+          </a>
+        </div>
+      </div>
+      {[imgCollPanda, imgCollRosa].map((img, idx) => (
+        <div class="rounded-xl overflow-hidden border border-white/[0.07] bg-[#111428] opacity-65">
+          <div class="aspect-[4/3] relative overflow-hidden bg-[#1d2242]">
+            <img src={img} alt={idx === 0 ? 'Panda Edition' : 'Rosa Edition'} class="w-full h-full object-cover" loading="lazy" />
+            <span class="absolute top-2.5 right-2.5 text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full bg-slate-500/15 text-slate-400 border border-slate-500/30">Muy pronto</span>
+          </div>
+          <div class="p-[18px]">
+            <h3 class="font-maven font-bold text-[15px] text-white mb-1">
+              {idx === 0 ? 'Minero S21+ | Panda Edition' : 'Minero S21+ | Rosa Edition'}
+            </h3>
+            <p class="text-[13px] text-white/50 leading-snug mb-3.5">
+              {idx === 0
+                ? 'Segunda colección. Próximamente disponible con nuevas características y beneficios.'
+                : 'Tercera colección. Expandiendo el ecosistema con nuevas variantes.'}
+            </p>
+            <div class="block text-center rounded-full py-2 bg-white/5 text-white/40 font-maven font-bold text-xs cursor-not-allowed">Muy pronto</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="py-16 md:py-20 px-5 md:px-8 bg-[#0d1020]" id="nft-gallery">
+    <div class="max-w-[1300px] mx-auto">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-2">
+        <h2
+          class="font-maven font-black text-lg md:text-[clamp(1.1rem,2.4vw,1.65rem)]"
+          style="background: linear-gradient(135deg, #e08324, #f7ad1f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+        >
+          Galería NFT · Minero S21+ | Andes SolarHash
+        </h2>
+        <a
+          href={openseaCollection}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center text-center shrink-0 min-h-9 px-4 rounded-lg bg-[#f7ad1f] text-[#0b0d1b] font-maven font-extrabold text-xs uppercase hover:bg-[#ffc44d] transition-colors w-fit"
+        >
+          Ver todos en OpenSea →
+        </a>
+      </div>
+      <p class="text-[13px] text-white/50 mb-5">
+        100 NFTs en la blockchain Polygon. Haz click en cualquier NFT para comprarlo directamente en OpenSea.
+      </p>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-7">
+        <div class="flex flex-wrap gap-2" id="gal-filters">
+          <button type="button" class="gal-fbtn active px-4 py-1.5 rounded-full text-xs font-semibold border border-white/[0.07] bg-[#f7ad1f]/10 border-[#f7ad1f]/35 text-[#f7ad1f] transition-all" data-filter="all">Todos</button>
+          <button type="button" class="gal-fbtn px-4 py-1.5 rounded-full text-xs font-semibold border border-white/[0.07] text-white/50 hover:text-[#f7ad1f] transition-all" data-filter="listed">En venta</button>
+          <button type="button" class="gal-fbtn px-4 py-1.5 rounded-full text-xs font-semibold border border-white/[0.07] text-white/50 hover:text-[#f7ad1f] transition-all" data-filter="unlisted">Sin listar</button>
+        </div>
+        <select id="gal-sort" class="bg-white/5 border border-white/[0.07] text-white text-xs rounded-md px-3 py-2 outline-none font-archivo max-w-full">
+          <option value="id_asc">ID Ascendente</option>
+          <option value="id_desc" selected>ID Descendente</option>
+          <option value="price_asc">Precio: Menor → Mayor</option>
+          <option value="price_desc">Precio: Mayor → Menor</option>
+        </select>
+      </div>
+      <div
+        class="grid gap-[18px]"
+        style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));"
+        id="nft-grid"
+      />
+      <div class="text-center mt-7">
+        <a
+          href={openseaCollection}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-full px-8 py-2.5 text-[13px] font-maven font-bold border border-[#f7ad1f]/22 bg-[#f7ad1f]/8 text-[#f7ad1f] hover:bg-[#f7ad1f]/15 transition-colors"
+        >
+          Ver los 100 NFTs en OpenSea →
+        </a>
+        <p class="text-xs text-white/30 mt-2.5" id="gal-status">Preparando galería…</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 md:py-20 px-5 md:px-8 bg-[#0b0d1b]">
+    <div class="max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16 items-start">
+      <div>
+        <h2 class="font-maven font-black text-xl md:text-3xl text-white uppercase leading-tight mb-3.5">Preguntas frecuentes</h2>
+        <p class="text-sm text-white/50 leading-relaxed">
+          Respuestas breves sobre NFTs productivos, pagos y verificación en Polygon.
+        </p>
+      </div>
+      <div class="flex flex-col" id="faqGrid" />
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="relative py-16 md:py-[88px] px-5 md:px-8 overflow-hidden bg-[#0d1020]">
+    <div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at center bottom, rgba(247,173,31,.06) 0%, transparent 60%);" aria-hidden="true" />
+    <div class="relative max-w-[1100px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
+      <div class="rounded-[22px] overflow-hidden shadow-[0_20px_56px_rgba(0,0,0,.4)]">
+        <img src={imgCommunity} alt="Comunidad Andes Solar Hash" class="w-full h-auto block" loading="lazy" />
+      </div>
+      <div>
+        <h2
+          class="font-maven font-black text-[clamp(1.75rem,4.5vw,3.75rem)] leading-[1.05] uppercase mb-5"
+          style="background: linear-gradient(135deg, #e08324, #f7ad1f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;"
+        >
+          Únete a la comunidad
+        </h2>
+        <p class="text-[15px] text-white/50 leading-relaxed mb-3">
+          Sigue las novedades del ecosistema, drops y operación minera en redes oficiales.
+        </p>
+        <div class="border border-[#f7ad1f] rounded-xl px-5 py-4 flex items-center gap-3 my-6">
+          <span class="font-maven font-black text-xl text-[#f7ad1f] uppercase">Discord &amp; X</span>
+        </div>
+        <p class="text-xs font-bold tracking-wider uppercase text-[#f7ad1f]/70 mb-3">Redes</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://x.com/andessolarhash" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#f7ad1f]/10 hover:border-[#f7ad1f]/30 transition-all text-white text-sm font-bold" aria-label="X">𝕏</a>
+          <a href="https://www.instagram.com/andessolarhash" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#f7ad1f]/10 hover:border-[#f7ad1f]/30 transition-all text-white text-xs font-bold" aria-label="Instagram">IG</a>
+          <a href="https://youtube.com/@andessolarhash" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:bg-[#f7ad1f]/10 hover:border-[#f7ad1f]/30 transition-all text-white text-xs font-bold" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style is:global>
+  @keyframes nft-spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .faq-item.open .faq-icon {
+    transform: rotate(180deg);
+  }
+  .faq-item.open .faq-answer {
+    max-height: 320px;
+    padding-bottom: 1rem;
+  }
+  .gal-fbtn.active {
+    background: rgba(247, 173, 31, 0.1);
+    border-color: rgba(247, 173, 31, 0.35);
+    color: #f7ad1f;
+  }
+</style>
+
+<script define:vars={{ OPEN_SEA_KEY: openSeaKey }}>
+  (function () {
+    const CA = '0xa9c4a4c1c9547Dd2973341B4E0a1C9F4A1240c1A';
+    const SLUG = 'minero-s21-andes-solarhash';
+    const OS = 'https://opensea.io/assets/matic/' + CA + '/';
+    const API = 'https://api.opensea.io/api/v2';
+    const POLYGON_RPCS = [
+      'https://polygon-rpc.com',
+      'https://rpc-mainnet.matic.quiknode.pro',
+      'https://rpc.ankr.com/polygon',
+    ];
+    const TOKEN_URI_SELECTOR = '0xc87b56dd';
+    const IPFS_GW = [
+      'https://nftstorage.link/ipfs/',
+      'https://cloudflare-ipfs.com/ipfs/',
+      'https://ipfs.io/ipfs/',
+      'https://gateway.pinata.cloud/ipfs/',
+    ];
+
+    function ipfsToHttp(uri) {
+      if (!uri) return '';
+      if (uri.startsWith('ipfs://')) return IPFS_GW[0] + uri.slice(7);
+      if (uri.startsWith('http')) return uri;
+      return IPFS_GW[0] + uri;
+    }
+
+    async function rpcCall(rpc, data) {
+      const r = await fetch(rpc, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: 'eth_call', params: [{ to: CA, data }, 'latest'] }),
+        signal: AbortSignal.timeout(6000),
+      });
+      if (!r.ok) throw new Error('RPC ' + r.status);
+      return r.json();
+    }
+    function encodeUint256(n) {
+      return n.toString(16).padStart(64, '0');
+    }
+    function decodeString(hex) {
+      if (!hex || hex === '0x') return '';
+      const data = hex.startsWith('0x') ? hex.slice(2) : hex;
+      try {
+        const offset = parseInt(data.slice(0, 64), 16) * 2;
+        const length = parseInt(data.slice(offset, offset + 64), 16);
+        return decodeURIComponent(
+          data.slice(offset + 64, offset + 64 + length * 2).replace(/../g, '%$&')
+        );
+      } catch {
+        return '';
+      }
+    }
+    async function getTokenURI(tokenId) {
+      const callData = TOKEN_URI_SELECTOR + encodeUint256(tokenId);
+      for (const rpc of POLYGON_RPCS) {
+        try {
+          const res = await rpcCall(rpc, callData);
+          if (res.result && res.result !== '0x') return decodeString(res.result);
+        } catch {}
+      }
+      return null;
+    }
+    async function getImageFromTokenURI(tokenId) {
+      const uri = await getTokenURI(tokenId);
+      if (!uri) return null;
+      if (uri.startsWith('data:application/json;base64,')) {
+        try {
+          return ipfsToHttp(JSON.parse(atob(uri.split(',')[1])).image || '');
+        } catch {
+          return null;
+        }
+      }
+      const metaUrl = ipfsToHttp(uri);
+      if (!metaUrl) return null;
+      const metaUrls = uri.startsWith('ipfs://') ? IPFS_GW.map((gw) => gw + uri.slice(7)) : [metaUrl];
+      for (const url of metaUrls) {
+        try {
+          const r = await fetch(url, { signal: AbortSignal.timeout(5000) });
+          if (!r.ok) continue;
+          const meta = await r.json();
+          const imgUri = meta.image || meta.image_url || meta.animation_url || '';
+          if (imgUri) return ipfsToHttp(imgUri);
+        } catch {}
+      }
+      return null;
+    }
+
+    let curFilter = 'all';
+    let curSort = 'id_desc';
+    let activeNFTs = Array.from({ length: 100 }, (_, i) => ({
+      id: String(i + 1),
+      name: 'Minero S21+ #' + (i + 1),
+      price: null,
+      listed: false,
+      img: null,
+    }));
+    const imageCache = {};
+
+    function setStatus(msg) {
+      const el = document.getElementById('gal-status');
+      if (el) el.textContent = msg;
+    }
+
+    async function loadAllImages() {
+      setStatus('🔗 Leyendo imágenes desde la blockchain Polygon…');
+      const firstImg = await getImageFromTokenURI(1);
+      if (firstImg) {
+        activeNFTs.forEach(function (n) {
+          n.img = firstImg;
+        });
+        renderGallery(activeNFTs);
+        setStatus('✅ Imágenes cargadas desde blockchain · Haz click para comprar en OpenSea');
+        imageCache['1'] = firstImg;
+        const midImg = await getImageFromTokenURI(50);
+        if (midImg && midImg !== firstImg) {
+          loadImagesBatch(
+            activeNFTs
+              .slice(0, 10)
+              .map(function (n) {
+                return n.id;
+              })
+          );
+        }
+      } else {
+        setStatus('📦 Cargando desde OpenSea API…');
+        loadNFTsFromAPI();
+      }
+    }
+
+    async function loadImagesBatch(ids) {
+      const pending = ids.filter(function (id) {
+        return !imageCache[id];
+      });
+      for (let i = 0; i < pending.length; i += 3) {
+        const chunk = pending.slice(i, i + 3);
+        await Promise.all(
+          chunk.map(async function (id) {
+            const img = await getImageFromTokenURI(parseInt(id, 10));
+            if (img) {
+              imageCache[id] = img;
+              const n = activeNFTs.find(function (x) {
+                return x.id === id;
+              });
+              if (n) n.img = img;
+            }
+          })
+        );
+        renderGallery(activeNFTs);
+      }
+    }
+
+    function apiHeaders() {
+      const h = { accept: 'application/json' };
+      if (OPEN_SEA_KEY) h['x-api-key'] = OPEN_SEA_KEY;
+      return h;
+    }
+
+    async function apiFetch(path) {
+      const url = API + path;
+      for (const proxy of ['', 'https://corsproxy.io/?', 'https://api.allorigins.win/get?url=']) {
+        try {
+          const fetchUrl = proxy ? proxy + encodeURIComponent(url) : url;
+          const r = await fetch(fetchUrl, { headers: apiHeaders(), signal: AbortSignal.timeout(6000) });
+          if (!r.ok) continue;
+          const d = await r.json();
+          if (d.contents) return JSON.parse(d.contents);
+          return d;
+        } catch {}
+      }
+      return null;
+    }
+
+    async function loadNFTsFromAPI() {
+      if (!OPEN_SEA_KEY) {
+        setStatus('📦 Sin API key: mostrando 100 NFTs con enlace a OpenSea. Opcional: PUBLIC_OPENSEA_API_KEY');
+        renderGallery(activeNFTs);
+        return;
+      }
+      const d = await apiFetch('/collection/' + SLUG + '/nfts?limit=100');
+      if (d && d.nfts && d.nfts.length) {
+        activeNFTs = d.nfts.map(function (n) {
+          return {
+            id: String(n.identifier),
+            name: n.name || 'Minero S21+ #' + n.identifier,
+            price: null,
+            listed: false,
+            img: n.image_url || null,
+          };
+        });
+        enrichPrices();
+        renderGallery(activeNFTs);
+        setStatus('✅ ' + activeNFTs.length + ' NFTs cargados (listado completo)');
+      } else {
+        setStatus('📦 100 NFTs de la colección · Haz click para comprar en OpenSea');
+        renderGallery(activeNFTs);
+      }
+    }
+
+    async function loadStats() {
+      if (!OPEN_SEA_KEY) return;
+      const stats = await apiFetch('/collections/' + SLUG + '/stats');
+      const col = await apiFetch('/collections/' + SLUG);
+      if (stats && stats.total) {
+        const t = stats.total;
+        const el2 = document.getElementById('sv2');
+        if (el2 && t.floor_price > 0) el2.textContent = parseFloat(t.floor_price).toFixed(2) + ' POL';
+        const el3 = document.getElementById('sv3');
+        if (el3 && t.volume > 0) el3.textContent = Math.round(t.volume) + ' POL';
+        const el4 = document.getElementById('sv4');
+        if (el4 && t.num_owners > 0) el4.textContent = t.num_owners;
+      }
+      if (col) {
+        const el1 = document.getElementById('sv1');
+        if (el1) el1.textContent = col.total_supply || 100;
+        if (col.distinct_owner_count > 0) {
+          const el4b = document.getElementById('sv4');
+          if (el4b) el4b.textContent = col.distinct_owner_count;
+        }
+      }
+    }
+
+    async function enrichPrices() {
+      if (!OPEN_SEA_KEY) return;
+      const d = await apiFetch('/listings/collection/' + SLUG + '/best?limit=100');
+      if (!d) return;
+      const listings = d.listings || d.orders || [];
+      let updated = false;
+      listings.forEach(function (l) {
+        const tid = String(
+          l.protocol_data?.parameters?.offer?.[0]?.identifierOrCriteria ||
+            l.taker_asset_bundle?.assets?.[0]?.token_id ||
+            ''
+        );
+        const raw = l.price?.current?.value || l.current_price || '0';
+        const pol = (parseInt(raw, 10) / 1e18).toFixed(2);
+        const n = activeNFTs.find(function (x) {
+          return x.id === tid;
+        });
+        if (n && parseFloat(pol) > 0) {
+          n.price = pol;
+          n.listed = true;
+          updated = true;
+        }
+      });
+      if (updated) renderGallery(activeNFTs);
+    }
+
+    const WETH_PRICE_NFT = 0.031;
+    let wethUSD = null;
+
+    function escapeAttr(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+    }
+    function escapeHtml(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function nftCard(n) {
+      const link = OS + n.id;
+      const priceStr = n.price ? n.price + ' POL' : '0.031 WETH';
+      const usdVal = wethUSD
+        ? '≈ $' + (WETH_PRICE_NFT * wethUSD).toFixed(2) + ' USD'
+        : '≈ precio cargando…';
+      const dot = n.listed ? 'background:#22c55e' : 'background:#64748b';
+      const stLbl = n.listed
+        ? '<span style="color:#22c55e;font-size:10px;font-weight:700">● EN VENTA</span>'
+        : '<span style="color:#64748b;font-size:10px;font-weight:700">● HOLD</span>';
+      const nameHtml = escapeHtml(n.name);
+      let imgBlock;
+      if (n.img) {
+        const alt1 = n.img.replace('nftstorage.link', 'cloudflare-ipfs.com');
+        const alt2 = n.img.replace('nftstorage.link', 'ipfs.io');
+        const alt3 = n.img.replace('cloudflare-ipfs.com', 'ipfs.io');
+        imgBlock =
+          '<img src="' +
+          escapeAttr(n.img) +
+          '" alt="' +
+          escapeAttr(n.name) +
+          '" loading="lazy" class="w-full h-full object-cover block" onerror="var fb=[\'' +
+          escapeAttr(alt1) +
+          "','" +
+          escapeAttr(alt2) +
+          "','" +
+          escapeAttr(alt3) +
+          '\'];var i=this._fi=((this._fi||0));if(i<fb.length){this._fi++;this.src=fb[i]}else{this.style.display=\'none\'}" />';
+      } else {
+        imgBlock =
+          '<div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#1d2242] to-[#111428]"><div class="w-10 h-10 border-2 border-[#f7ad1f]/30 border-t-[#f7ad1f] rounded-full" style="animation:nft-spin .8s linear infinite"></div></div>';
+      }
+      return (
+        '<a class="group rounded-xl overflow-hidden border border-white/[0.07] bg-[#111428] block text-inherit no-underline transition-all hover:-translate-y-1 hover:border-[#f7ad1f]/25 hover:shadow-[0_12px_36px_rgba(247,173,31,.12)]" href="' +
+        link +
+        '" target="_blank" rel="noopener"><div class="relative aspect-square overflow-hidden bg-[#1d2242]">' +
+        imgBlock +
+        '<div class="absolute top-2 right-2 w-2 h-2 rounded-full border border-black/50" style="' +
+        dot +
+        '"></div><div class="absolute bottom-0 left-0 right-0 px-2 py-1 bg-gradient-to-t from-black/80 to-transparent font-maven text-[11px] font-bold text-white">#' +
+        n.id +
+        '</div></div><div class="p-3"><div class="font-maven font-bold text-[13px] text-white mb-1 truncate">' +
+        nameHtml +
+        '</div><div class="flex items-center justify-between mb-0.5"><span class="text-[12.5px] font-bold text-[#f7ad1f] font-maven">' +
+        priceStr +
+        '</span>' +
+        stLbl +
+        '</div><div class="text-[10px] text-white/30 mb-2">' +
+        usdVal +
+        ' · Polygon</div><span class="block bg-[#f7ad1f] text-black rounded-md py-2 text-center font-maven font-bold text-[11.5px] group-hover:bg-[#ffc44d]">🛒 Comprar en OpenSea</span></div></a>'
+      );
+    }
+
+    function renderGallery(data) {
+      let list = data.slice();
+      if (curFilter === 'listed') list = list.filter(function (n) { return n.listed; });
+      if (curFilter === 'unlisted') list = list.filter(function (n) { return !n.listed; });
+      if (curSort === 'id_asc') list.sort(function (a, b) { return +a.id - +b.id; });
+      if (curSort === 'id_desc') list.sort(function (a, b) { return +b.id - +a.id; });
+      if (curSort === 'price_asc') list.sort(function (a, b) { return +(a.price || 9999) - +(b.price || 9999); });
+      if (curSort === 'price_desc') list.sort(function (a, b) { return +(b.price || 0) - +(a.price || 0); });
+      const grid = document.getElementById('nft-grid');
+      if (!grid) return;
+      if (!list.length) {
+        grid.innerHTML =
+          '<div class="col-span-full text-center py-12 text-white/40 text-sm">Sin NFTs con este filtro.</div>';
+        return;
+      }
+      grid.innerHTML = list.map(nftCard).join('');
+    }
+
+    function filterG(f) {
+      curFilter = f;
+      document.querySelectorAll('.gal-fbtn').forEach(function (b) {
+        b.classList.toggle('active', b.getAttribute('data-filter') === f);
+      });
+      renderGallery(activeNFTs);
+    }
+
+    function sortG(v) {
+      curSort = v;
+      renderGallery(activeNFTs);
+    }
+
+    async function fetchWETHPrice() {
+      try {
+        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=weth&vs_currencies=usd', {
+          signal: AbortSignal.timeout(8000),
+        });
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        wethUSD = data?.weth?.usd || null;
+      } catch {
+        try {
+          const res2 = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd', {
+            signal: AbortSignal.timeout(8000),
+          });
+          if (res2.ok) {
+            const d2 = await res2.json();
+            wethUSD = d2?.ethereum?.usd || null;
+          }
+        } catch {}
+      }
+      const usdEl = document.getElementById('price-weth-usd');
+      const badge = document.getElementById('weth-live-badge');
+      if (usdEl) {
+        usdEl.textContent = wethUSD ? '≈ $' + (WETH_PRICE_NFT * wethUSD).toFixed(2) + ' USD' : '≈ —';
+      }
+      if (badge) {
+        badge.textContent = wethUSD ? '● Actualizado' : '● Sin tasa';
+        badge.className = 'text-[11px] font-bold font-maven ' + (wethUSD ? 'text-green-400' : 'text-white/50');
+      }
+      const sv2 = document.getElementById('sv2');
+      if (sv2 && wethUSD && sv2.querySelector('.skel-v')) {
+        sv2.textContent = '$' + (WETH_PRICE_NFT * wethUSD).toFixed(2) + ' USD';
+      }
+      renderGallery(activeNFTs);
+    }
+
+    const FAQS = [
+      ['¿Qué es un NFT productivo de Andes Solar Hash?', 'Es un token en blockchain Polygon que representa una fracción de propiedad en nuestros equipos mineros S21+. Al poseerlo, recibes una proporción de los BTC generados por esos equipos.'],
+      ['¿Cuánto puedo esperar ganar con mi NFT?', 'Los rendimientos varían según el precio del Bitcoin, la dificultad de la red y la eficiencia del equipo. Las estimaciones son orientativas y sujetas al mercado.'],
+      ['¿Cómo se realizan los pagos de recompensas?', 'Los pagos se coordinan según el modelo del proyecto en POL (Polygon) o BTC a la wallet que posea el NFT.'],
+      ['¿Puedo vender mi NFT en el mercado secundario?', 'Sí, los NFTs son transferibles en OpenSea y marketplaces compatibles con Polygon.'],
+      ['¿Qué infraestructura respalda estos NFTs?', 'Equipos Bitmain S21+ con hosting competitivo en Chile.'],
+      ['¿Cuántos NFTs existen?', 'La colección activa tiene 100 NFTs en Polygon.'],
+      ['¿Cómo verifico la propiedad?', 'Puedes verificar en PolygonScan el contrato ' + CA + '.'],
+    ];
+
+    function buildFAQ() {
+      const el = document.getElementById('faqGrid');
+      if (!el) return;
+      el.innerHTML = FAQS.map(function (f, i) {
+        return (
+          '<div class="faq-item border-b border-white/[0.07]" data-i="' +
+          i +
+          '"><button type="button" class="faq-q w-full flex justify-between items-center gap-3 py-4 text-left cursor-pointer bg-transparent border-0"><span class="font-maven font-bold text-sm md:text-[14.5px] text-white leading-snug">' +
+          f[0] +
+          '</span><span class="faq-icon text-[#f7ad1f] text-base shrink-0 transition-transform duration-300">▲</span></button><div class="faq-answer max-h-0 overflow-hidden transition-[max-height] duration-300 ease-out"><p class="text-sm text-white/50 leading-relaxed pb-0">' +
+          f[1] +
+          '</p></div></div>'
+        );
+      }).join('');
+      el.querySelectorAll('.faq-item').forEach(function (row) {
+        row.querySelector('.faq-q').addEventListener('click', function () {
+          row.classList.toggle('open');
+        });
+      });
+    }
+
+    document.querySelectorAll('.gal-fbtn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        filterG(btn.getAttribute('data-filter'));
+      });
+    });
+    const sortSel = document.getElementById('gal-sort');
+    if (sortSel) sortSel.addEventListener('change', function () { sortG(sortSel.value); });
+
+    buildFAQ();
+    renderGallery(activeNFTs);
+    setStatus('🔗 Leyendo imágenes desde la blockchain Polygon…');
+    loadAllImages();
+    loadStats();
+    enrichPrices();
+    fetchWETHPrice();
+    setInterval(fetchWETHPrice, 60000);
+
+    var sv1 = document.getElementById('sv1');
+    if (sv1 && sv1.querySelector('.skel-v')) sv1.textContent = '100';
+    if (!OPEN_SEA_KEY) {
+      ['sv3', 'sv4'].forEach(function (id) {
+        var e = document.getElementById(id);
+        if (e && e.querySelector('.skel-v')) e.textContent = '—';
+      });
+    }
+    var progressBar = document.getElementById('progressBar');
+    if (progressBar) progressBar.style.width = '1%';
+  })();
+</script>

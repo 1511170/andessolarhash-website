@@ -1,0 +1,109 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import BlogList from '../../components/blog/BlogList.astro';
+
+const posts = await getCollection('blog');
+---
+
+<Layout
+  title="Blog y Noticias - Andes Solar Hash"
+  description="Últimas noticias sobre minería Bitcoin, actualizaciones de productos y casos de éxito en Chile"
+>
+  <!-- Hero Section -->
+  <section class="blog-hero">
+    <div class="blog-hero-overlay"></div>
+    <div class="blog-hero-content">
+      <h1>Blog y Noticias</h1>
+      <p>Últimas noticias sobre minería Bitcoin, actualizaciones de productos y casos de éxito</p>
+    </div>
+  </section>
+
+  <!-- Blog List -->
+  <section class="blog-section">
+    <div class="container">
+      <BlogList posts={posts} columns={3} showFilters={true} />
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .blog-hero {
+    position: relative;
+    height: 400px;
+    background: linear-gradient(135deg, var(--color-bg-deep) 0%, var(--color-bg-mid) 100%);
+    background-image: url('/images/blog/hero/hero-main.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--spacing-nav-height);
+    overflow: hidden;
+  }
+
+  .blog-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(11, 13, 27, 0.95) 0%,
+      rgba(16, 20, 41, 0.85) 50%,
+      rgba(29, 34, 66, 0.75) 100%
+    );
+  }
+
+  .blog-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+
+  .blog-hero h1 {
+    font-family: var(--font-family-display);
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, var(--color-gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .blog-hero p {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  .blog-section {
+    padding: 80px 0;
+    background: var(--color-bg-deep);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    .blog-hero {
+      height: 300px;
+    }
+
+    .blog-hero h1 {
+      font-size: 2.5rem;
+    }
+
+    .blog-hero p {
+      font-size: 1rem;
+    }
+
+    .blog-section {
+      padding: 60px 0;
+    }
+  }
+</style>

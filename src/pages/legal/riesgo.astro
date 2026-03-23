@@ -1,0 +1,722 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lastUpdated = '17 de marzo de 2026';
+---
+
+<Layout 
+  title="Aviso de Riesgo | Andes Solar Hash"
+  description="Aviso de riesgo de Andes Solar Hash. Información importante sobre los riesgos asociados a la minería de criptomonedas y nuestros servicios."
+>
+  <div class="legal-page">
+    <!-- Hero Section -->
+    <section class="legal-hero">
+      <div class="legal-hero-content">
+        <div class="hero-badge warning">
+          <div class="hero-badge-dot"></div>
+          <span class="hero-badge-text">ADVERTENCIA IMPORTANTE</span>
+        </div>
+        <h1>Aviso de Riesgo</h1>
+        <p class="last-updated">Última actualización: {lastUpdated}</p>
+      </div>
+    </section>
+
+    <!-- Alert Banner -->
+    <section class="alert-banner">
+      <div class="alert-content">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        <div class="alert-text">
+          <strong>ADVERTENCIA:</strong> La inversión en minería de criptomonedas conlleva riesgos significativos, incluyendo la posible pérdida total del capital invertido. Este documento describe los principales riesgos asociados. <strong>LEA CUIDADOSAMENTE ANTES DE INVERTIR.</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="legal-content">
+      <div class="legal-container">
+        <!-- Advertencia importante -->
+        <article class="legal-section">
+          <h2>1. Advertencia importante sobre minería de criptomonedas</h2>
+          <p>Andes Solar Hash SpA opera como proveedor de infraestructura y equipos para minería de Bitcoin. Queremos que nuestros clientes y usuarios comprendan claramente que:</p>
+          
+          <div class="risk-highlights">
+            <div class="risk-item">
+              <span class="risk-icon">⚠️</span>
+              <p><strong>No somos asesores de inversión.</strong> No proporcionamos asesoramiento financiero, legal o fiscal. La decisión de invertir es exclusivamente suya.</p>
+            </div>
+            <div class="risk-item">
+              <span class="risk-icon">⚠️</span>
+              <p><strong>Rendimientos pasados no garantizan resultados futuros.</strong> Cualquier información histórica sobre rentabilidad es meramente ilustrativa.</p>
+            </div>
+            <div class="risk-item">
+              <span class="risk-icon">⚠️</span>
+              <p><strong>Invierta solo lo que pueda permitirse perder.</strong> Nunca invierta fondos necesarios para gastos esenciales o deudas.</p>
+            </div>
+          </div>
+
+          <p>Al utilizar nuestros servicios, usted reconoce que ha leído, comprendido y acepta asumir todos los riesgos descritos en este aviso y en nuestros <a href="/legal/terminos/">Términos y Condiciones</a>.</p>
+        </article>
+
+        <!-- Volatilidad del mercado -->
+        <article class="legal-section">
+          <h2>2. Volatilidad del mercado de criptomonedas</h2>
+          
+          <h3>2.1 Fluctuación del precio de Bitcoin</h3>
+          <p>El precio de Bitcoin es extremadamente volátil y puede experimentar cambios significativos en períodos cortos:</p>
+          <ul>
+            <li>Variaciones de precio del 10-20% en un solo día son comunes</li>
+            <li>Correcciones del 50% o más del precio máximo histórico han ocurrido múltiples veces</li>
+            <li>El valor de sus ingresos por minería está directamente vinculado al precio de Bitcoin</li>
+            <li>Una caída prolongada del precio puede hacer que la operación minera sea no rentable</li>
+          </ul>
+
+          <h3>2.2 Dificultad de la red Bitcoin</h3>
+          <p>La red Bitcoin ajusta su dificultad aproximadamente cada 2 semanas:</p>
+          <ul>
+            <li>Un aumento de dificultad reduce la cantidad de Bitcoin que puede minar con el mismo equipo</li>
+            <li>La dificultad ha tendido históricamente al alza a medida que más mineros se unen a la red</li>
+            <li>Eventos como el "halving" reducen a la mitad las recompensas de minería cada ~4 años</li>
+            <li>El próximo halving ya ocurrió en 2024, reduciendo las recompensas de 6.25 a 3.125 BTC por bloque</li>
+          </ul>
+
+          <h3>2.3 Rentabilidad variable</h3>
+          <p>La rentabilidad de la minería depende de múltiples factores variables:</p>
+          <ul>
+            <li>Precio de Bitcoin en el momento de venta de sus recompensas</li>
+            <li>Costo de electricidad y condiciones del contrato de hosting</li>
+            <li>Eficiencia energética de sus equipos comparada con nuevos modelos</li>
+            <li>Estado general del mercado cripto y condiciones macroeconómicas</li>
+          </ul>
+
+          <div class="info-box danger">
+            <strong>Estimaciones de ROI:</strong> Cualquier estimación de retorno de inversión (ROI) proporcionada es meramente ilustrativa y está basada en supuestos que pueden no materializarse. El ROI real puede ser significativamente menor o incluso resultar en pérdidas totales.
+          </div>
+        </article>
+
+        <!-- Riesgos técnicos -->
+        <article class="legal-section">
+          <h2>3. Riesgos técnicos</h2>
+          
+          <h3>3.1 Fallos de equipos</h3>
+          <p>Los equipos de minería ASIC son dispositivos complejos sujetos a fallos:</p>
+          <ul>
+            <li>Las tarjetas hash pueden fallar y requerir reparación o reemplazo</li>
+            <li>Los ventiladores tienen vida útil limitada y deben reemplazarse periódicamente</li>
+            <li>La exposición prolongada a altas temperaturas acelera el desgaste</li>
+            <li>El mantenimiento preventivo no elimina completamente el riesgo de fallos</li>
+          </ul>
+
+          <h3>3.2 Obsolescencia tecnológica</h3>
+          <p>La tecnología de minería evoluciona rápidamente:</p>
+          <ul>
+            <li>Nuevos modelos más eficientes pueden hacer que equipos anteriores sean no rentables</li>
+            <li>La vida útil económica de un minero puede ser menor que su vida útil física</li>
+            <li>El valor de reventa de equipos obsoletos puede ser cercano a cero</li>
+            <li>La inversión en equipos de última generación no garantiza ventaja competitiva permanente</li>
+          </ul>
+
+          <h3>3.3 Riesgos de infraestructura</h3>
+          <p>La operación minera depende de infraestructura crítica:</p>
+          <ul>
+            <li>Cortes de energía eléctrica pueden detener la operación y causar pérdida de producción</li>
+            <li>Problemas de conectividad a internet afectan la participación en la red</li>
+            <li>Fallos en sistemas de enfriamiento pueden dañar equipos irreparablemente</li>
+            <li>Desastres naturales o incendios pueden afectar instalaciones físicas</li>
+          </ul>
+        </article>
+
+        <!-- Riesgos regulatorios -->
+        <article class="legal-section">
+          <h2>4. Riesgos regulatorios</h2>
+          
+          <h3>4.1 Cambios en la regulación</h3>
+          <p>El marco regulatorio para criptomonedas está en constante evolución:</p>
+          <ul>
+            <li>Los gobiernos pueden imponer restricciones o prohibiciones a la minería de Bitcoin</li>
+            <li>China prohibió la minería de criptomonedas en 2021, causando una migración masiva</li>
+            <li>Otros países han implementado restricciones basadas en preocupaciones ambientales</li>
+            <li>Chile actualmente permite la minería, pero las regulaciones pueden cambiar</li>
+          </ul>
+
+          <h3>4.2 Obrigaciones tributarias</h3>
+          <p>La actividad minera tiene implicaciones fiscales:</p>
+          <ul>
+            <li>Los ingresos por minería deben declararse ante el SII según la normativa vigente</li>
+            <li>La compraventa de criptomonedas puede generar obligaciones tributarias</li>
+            <li>Las regulaciones fiscales pueden cambiar y afectar la rentabilidad neta</li>
+            <li>Recomendamos consultar con un contador o asesor fiscal especializado</li>
+          </ul>
+
+          <h3>4.3 Riesgo de confiscación o restricción bancaria</h3>
+          <ul>
+            <li>Algunas entidades bancarias pueden rechazar transacciones relacionadas con criptomonedas</li>
+            <li>La conversión de cripto a fiat puede enfrentar obstáculos regulatorios</li>
+            <li>En escenarios extremos, activos relacionados con cripto podrían ser confiscados</li>
+          </ul>
+        </article>
+
+        <!-- Riesgos operacionales -->
+        <article class="legal-section">
+          <h2>5. Riesgos operacionales</h2>
+          
+          <h3>5.1 Riesgos del servicio de hosting</h3>
+          <p>Si utiliza nuestros servicios de hosting, tenga en cuenta:</p>
+          <ul>
+            <li>Pérdida de producción durante mantenimientos programados o emergencias</li>
+            <li>Riesgo de daño o robo del equipo mientras está en nuestras instalaciones</li>
+            <li>Potencial interrupción del servicio por incumplimiento del contrato por cualquiera de las partes</li>
+            <li>Costos de recuperación del equipo si decide terminar el contrato</li>
+          </ul>
+
+          <h3>5.2 Riesgos de contraparte</h3>
+          <ul>
+            <li>Dependencia de Andes Solar Hash para la operación de sus equipos (en modo hosting)</li>
+            <li>Riesgo de insolvencia o cese de operaciones de la empresa</li>
+            <li>Retrasos en pagos de recompensas mineras o distribuciones</li>
+          </ul>
+
+          <h3>5.3 Riesgos de ciberseguridad</h3>
+          <ul>
+            <li>Ataques a pools de minería o billeteras de custodia</li>
+            <li>Phishing o estafas dirigidas a mineros de criptomonedas</li>
+            <li>Pérdida de acceso a billeteras por pérdida de claves privadas</li>
+            <li>Recomendamos utilizar billeteras seguras y habilitar autenticación de dos factores</li>
+          </ul>
+        </article>
+
+        <!-- ROI no garantizado -->
+        <article class="legal-section">
+          <h2>6. ROI no garantizado</h2>
+          
+          <h3>6.1 Sin promesas de rentabilidad</h3>
+          <p>Es fundamental entender que:</p>
+          <ul>
+            <li><strong>No garantizamos ningún retorno de inversión específico</strong></li>
+            <li>Las proyecciones de rentabilidad son estimaciones basadas en condiciones actuales</li>
+            <li>El mercado de criptomonedas es impredecible y cualquier proyección puede ser incorrecta</li>
+            <li>Factores externos pueden hacer que una inversión rentable se vuelva no rentable</li>
+          </ul>
+
+          <h3>6.2 Ejemplo ilustrativo de variabilidad</h3>
+          <div class="example-box">
+            <p><strong>Escenario optimista:</strong> Precio de Bitcoin sube, dificultad estable, operación continua → ROI en 12-18 meses</p>
+            <p><strong>Escenario base:</strong> Condiciones de mercado promedio → ROI en 24-36 meses</p>
+            <p><strong>Escenario pesimista:</strong> Precio cae, dificultad aumenta, fallos de equipo → ROI extendido o pérdida parcial/total</p>
+          </div>
+          <p class="note">Los escenarios anteriores son ejemplos hipotéticos. Los resultados reales pueden variar significativamente.</p>
+
+          <h3>6.3 Depreciación del capital</h3>
+          <ul>
+            <li>Los equipos ASIC se deprecian rápidamente debido a la obsolescencia tecnológica</li>
+            <li>El valor de reventa puede ser significativamente menor al precio de compra</li>
+            <li>Equipos de más de 2-3 años pueden tener valor residual cercano a cero</li>
+          </ul>
+        </article>
+
+        <!-- Recomendación de asesoramiento profesional -->
+        <article class="legal-section">
+          <h2>7. Recomendación de asesoramiento profesional</h2>
+          
+          <p>Dada la complejidad y los riesgos asociados a la inversión en minería de criptomonedas, <strong>recomendamos encarecidamente</strong> que:</p>
+          
+          <div class="recommendation-list">
+            <div class="rec-item">
+              <div class="rec-icon">👤</div>
+              <div class="rec-content">
+                <h4>Asesor Financiero</h4>
+                <p>Consulte con un asesor financiero certificado para evaluar si la inversión en minería se ajusta a su perfil de riesgo y objetivos financieros.</p>
+              </div>
+            </div>
+            <div class="rec-item">
+              <div class="rec-icon">⚖️</div>
+              <div class="rec-content">
+                <h4>Asesor Legal</h4>
+                <p>Obtenga asesoramiento legal sobre las obligaciones regulatorias, contractuales y de cumplimiento asociadas a la actividad minera.</p>
+              </div>
+            </div>
+            <div class="rec-item">
+              <div class="rec-icon">📊</div>
+              <div class="rec-content">
+                <h4>Contador / Tributarista</h4>
+                <p>Consulte con un profesional contable sobre las obligaciones tributarias específicas derivadas de la actividad minera de criptomonedas en Chile.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <strong>Educación continua:</strong> La tecnología blockchain y el ecosistema cripto evolucionan constantemente. Manténgase informado sobre desarrollos técnicos, regulatorios y de mercado que puedan afectar su inversión.
+          </div>
+        </article>
+
+        <!-- Aceptación de riesgos -->
+        <article class="legal-section">
+          <h2>8. Aceptación de riesgos</h2>
+          
+          <p>Al adquirir productos o servicios de Andes Solar Hash, usted declara y garantiza que:</p>
+          
+          <ul>
+            <li>Ha leído y comprendido completamente este Aviso de Riesgo</li>
+            <li>Es consciente de que la inversión en minería de criptomonedas conlleva riesgos significativos</li>
+            <li>Entiende que puede perder total o parcialmente su inversión</li>
+            <li>Tiene la capacidad financiera para soportar la pérdida total de su inversión</li>
+            <li>No depende del éxito de esta inversión para su sustento o cumplimiento de obligaciones financieras</li>
+            <li>Ha buscado asesoramiento profesional independiente si lo consideró necesario</li>
+            <li>Realiza esta inversión por decisión propia y asume toda la responsabilidad por los resultados</li>
+          </ul>
+
+          <div class="acceptance-box">
+            <h3>¿Necesita más información?</h3>
+            <p>Si tiene dudas sobre cualquier aspecto de este Aviso de Riesgo, no debe proceder con la inversión hasta haber obtenido aclaraciones satisfactorias.</p>
+            <a href="/contacto/" class="btn-contact">Contactar a nuestro equipo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="legal-footer">
+      <div class="legal-footer-content">
+        <a href="/" class="btn-back">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M15 10H5M5 10L9 6M5 10L9 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Volver al inicio
+        </a>
+        <p class="legal-disclaimer">
+          © {new Date().getFullYear()} Andes Solar Hash SpA. Todos los derechos reservados.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <style>
+    .legal-page {
+      background: var(--bg-deep);
+      min-height: 100vh;
+    }
+
+    /* Hero Section */
+    .legal-hero {
+      padding: 140px 80px 40px;
+      background: linear-gradient(to bottom, var(--bg-mid), var(--bg-deep));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--gold);
+      border-radius: 9999px;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+    }
+
+    .hero-badge.warning {
+      border-color: #ef4444;
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+    }
+
+    .hero-badge-text {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: #ef4444;
+      letter-spacing: 0.5px;
+    }
+
+    .legal-hero h1 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 900;
+      font-size: clamp(36px, 5vw, 56px);
+      background: linear-gradient(to right, #ef4444, var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .last-updated {
+      font-family: 'Archivo', sans-serif;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    /* Alert Banner */
+    .alert-banner {
+      background: linear-gradient(135deg, rgba(239, 68, 68, 0.15), rgba(247, 173, 31, 0.1));
+      border-top: 1px solid rgba(239, 68, 68, 0.2);
+      border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+      padding: 24px 80px;
+    }
+
+    .alert-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .alert-content svg {
+      flex-shrink: 0;
+      color: #ef4444;
+    }
+
+    .alert-text {
+      font-family: 'Archivo', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    .alert-text strong {
+      color: #ef4444;
+    }
+
+    /* Content Section */
+    .legal-content {
+      padding: 60px 80px 80px;
+    }
+
+    .legal-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .legal-section {
+      margin-bottom: 48px;
+    }
+
+    .legal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .legal-section h2 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 800;
+      font-size: 24px;
+      color: white;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .legal-section h3 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--gold);
+      margin: 24px 0 12px;
+    }
+
+    .legal-section p {
+      font-family: 'Archivo', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 16px;
+    }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .legal-section ul li {
+      font-family: 'Archivo', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 12px;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .legal-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+    }
+
+    .legal-section a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    .legal-section strong {
+      color: white;
+      font-weight: 600;
+    }
+
+    /* Risk Highlights */
+    .risk-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 24px 0;
+    }
+
+    .risk-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(239, 68, 68, 0.05);
+      border: 1px solid rgba(239, 68, 68, 0.15);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+
+    .risk-icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .risk-item p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* Info Box */
+    .info-box {
+      background: rgba(247, 173, 31, 0.1);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-family: 'Archivo', sans-serif;
+      font-size: 15px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .info-box.danger {
+      background: rgba(239, 68, 68, 0.1);
+      border-left-color: #ef4444;
+    }
+
+    /* Example Box */
+    .example-box {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .example-box p {
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .example-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Recommendation List */
+    .recommendation-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .rec-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .rec-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-mid);
+      border-radius: 10px;
+    }
+
+    .rec-content h4 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      color: white;
+      margin-bottom: 6px;
+    }
+
+    .rec-content p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    /* Acceptance Box */
+    .acceptance-box {
+      background: linear-gradient(135deg, rgba(247, 173, 31, 0.1), rgba(16, 20, 41, 0.5));
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      padding: 32px;
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    .acceptance-box h3 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    .acceptance-box p {
+      margin-bottom: 20px;
+    }
+
+    .btn-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--gold);
+      border: none;
+      border-radius: 100px;
+      padding: 16px 32px;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--bg-deep);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-contact:hover {
+      opacity: 0.9;
+    }
+
+    /* Footer Section */
+    .legal-footer {
+      padding: 40px 80px;
+      background: var(--bg-mid);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .legal-footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      border: 1px solid var(--gold);
+      border-radius: 100px;
+      padding: 14px 28px;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--gold);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-back:hover {
+      background: var(--gold);
+      color: var(--bg-deep);
+    }
+
+    .btn-back:hover svg path {
+      stroke: var(--bg-deep);
+    }
+
+    .legal-disclaimer {
+      font-family: 'Archivo', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .legal-hero {
+        padding: 120px 20px 32px;
+      }
+
+      .alert-banner {
+        padding: 20px;
+      }
+
+      .legal-content {
+        padding: 40px 20px;
+      }
+
+      .legal-footer {
+        padding: 32px 20px;
+      }
+
+      .legal-section h2 {
+        font-size: 20px;
+      }
+
+      .legal-section h3 {
+        font-size: 16px;
+      }
+
+      .legal-section p,
+      .legal-section ul li {
+        font-size: 15px;
+      }
+
+      .rec-item {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .acceptance-box {
+        padding: 24px;
+      }
+    }
+  </style>
+</Layout>
+

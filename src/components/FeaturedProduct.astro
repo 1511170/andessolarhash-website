@@ -1,0 +1,158 @@
+---
+interface Props {
+  label: string;
+  title: string;
+  description: string;
+  specs: string[];
+  image: string;
+  imageAlt: string;
+  ctaButtons?: Array<{
+    text: string;
+    href: string;
+    variant: 'outline' | 'solid';
+  }>;
+}
+
+const { label, title, description, specs, image, imageAlt, ctaButtons = [] } = Astro.props;
+---
+
+<section class="featured">
+  <div class="featured-grid">
+    <div class="featured-content">
+      <div class="featured-label">{label}</div>
+      <h2 class="featured-title" set:html={title.replace(/\n/g, '<br />')} />
+      <p class="featured-desc">{description}</p>
+
+      <ul class="featured-list">
+        {specs.map(spec => (
+          <li>
+            <svg viewBox="0 0 16 16" fill="none">
+              <circle cx="8" cy="8" r="7" stroke="#f7ad1f" stroke-width="1.5"/>
+              <path d="M5 8l2 2 4-4" stroke="#f7ad1f" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            {spec}
+          </li>
+        ))}
+      </ul>
+
+      {ctaButtons.length > 0 && (
+        <div class="featured-btns">
+          {ctaButtons.map(button => (
+            button.variant === 'outline' ? (
+              <a class="btn-outline" href={button.href}>{button.text}</a>
+            ) : (
+              <a class="btn-solid" href={button.href}>{button.text}</a>
+            )
+          ))}
+        </div>
+      )}
+    </div>
+
+    <div class="featured-image">
+      <img src={image} alt={imageAlt} />
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured {
+    padding: 80px;
+    background: linear-gradient(to right, rgba(29,34,66,0.3), transparent, rgba(29,34,66,0.3)), var(--color-bg-deep);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .featured-label {
+    font-family: var(--font-family-sans);
+    font-weight: 700;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+
+  .featured-title {
+    font-family: var(--font-family-display);
+    font-weight: 900;
+    font-size: clamp(28px, 3vw, 36px);
+    color: #f7ad1f;
+    -webkit-text-fill-color: #f7ad1f;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .featured-desc {
+    font-size: 18px;
+    color: white;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .featured-list {
+    list-style: none;
+    margin-bottom: 36px;
+  }
+
+  .featured-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--color-text-light);
+    margin-bottom: 12px;
+  }
+
+  .featured-list svg {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+  }
+
+  .featured-btns {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .featured-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .featured-image img {
+    width: 100%;
+    max-width: 460px;
+    filter: drop-shadow(0 24px 48px rgba(0,0,0,0.5));
+  }
+
+  @media (max-width: 1024px) {
+    .featured {
+      padding: 60px 40px;
+    }
+
+    .featured-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .featured {
+      padding: 40px 20px;
+    }
+
+    .featured-btns {
+      flex-direction: column;
+    }
+  }
+</style>

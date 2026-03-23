@@ -1,0 +1,189 @@
+---
+import BlogCard from './BlogCard.astro';
+
+interface Post {
+  id: string;
+  slug: string;
+  data: {
+    title: string;
+    excerpt: string;
+    date: Date;
+    author: string;
+    category?: string;
+    image?: string;
+    published: boolean;
+  };
+}
+
+interface Props {
+  posts: Post[];
+  columns?: 2 | 3;
+  showFilters?: boolean;
+}
+
+const {
+  posts,
+  columns = 3,
+  showFilters = true
+} = Astro.props;
+
+// Filtrar solo publicados y ordenar por fecha
+const publishedPosts = posts
+  .filter(p => p.data.published !== false)
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+// Extraer categorías únicas
+const categories = ['Todos', ...new Set(publishedPosts.map(p => p.data.category || 'General'))];
+
+const gridCols = columns === 2 ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3';
+---
+
+<div class="blog-list">
+  {showFilters && categories.length > 1 && (
+    <div class="blog-filters">
+      {categories.map((cat) => (
+        <button
+          class={`filter-btn ${cat === 'Todos' ? 'active' : ''}`}
+          data-category={cat}
+        >
+          {cat}
+        </button>
+      ))}
+    </div>
+  )}
+
+  {publishedPosts.length === 0 ? (
+    <div class="blog-empty">
+      <p>No hay artículos publicados aún.</p>
+    </div>
+  ) : (
+    <div class={`blog-grid ${gridCols}`}>
+      {publishedPosts.map((post) => (
+        <BlogCard
+          title={post.data.title}
+          excerpt={post.data.excerpt}
+          date={post.data.date.toISOString()}
+          author={post.data.author}
+          category={post.data.category}
+          slug={post.slug}
+          image={post.data.image}
+        />
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .blog-list {
+    width: 100%;
+  }
+
+  .blog-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+  }
+
+  .filter-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-button);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: transparent;
+    color: var(--color-text-light);
+    font-family: var(--font-family-display);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    background: rgba(247, 173, 31, 0.1);
+  }
+
+  .filter-btn.active {
+    border-color: var(--color-gold);
+    background: var(--color-gold);
+    color: var(--color-bg-deep);
+  }
+
+  .blog-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid.md\:grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .blog-grid.md\:grid-cols-2,
+    .blog-grid.md\:grid-cols-2.lg\:grid-cols-3 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .blog-grid.md\:grid-cols-2.lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .blog-empty {
+    text-align: center;
+    padding: 4rem 2rem;
+    color: var(--color-text-muted);
+  }
+
+  .blog-empty p {
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: 768px) {
+    .blog-filters {
+      margin-bottom: 2rem;
+    }
+
+    .blog-grid {
+      gap: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  // Filtro por categoría
+  const buttons = document.querySelectorAll('[data-category]');
+  const cards = document.querySelectorAll('.blog-card');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const category = btn.getAttribute('data-category');
+
+      // Toggle active state
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter cards
+      cards.forEach(card => {
+        const cardCategory = card.querySelector('.blog-card-category')?.textContent || 'General';
+
+        if (category === 'Todos' || cardCategory === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

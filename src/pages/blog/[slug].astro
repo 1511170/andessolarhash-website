@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import BlogPost from '../../components/blog/BlogPost.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout
+  title={`${post.data.title} - Blog Andes Solar Hash`}
+  description={post.data.excerpt}
+>
+  <div class="blog-post-wrapper">
+    <BlogPost
+      title={post.data.title}
+      content=""
+      excerpt={post.data.excerpt}
+      date={post.data.date}
+      author={post.data.author}
+      category={post.data.category}
+    >
+      <Content />
+    </BlogPost>
+  </div>
+</Layout>
+
+<style>
+  .blog-post-wrapper {
+    margin-top: var(--spacing-nav-height);
+    padding: 80px 20px;
+    background: var(--color-bg-deep);
+    min-height: 100vh;
+  }
+
+  @media (max-width: 768px) {
+    .blog-post-wrapper {
+      padding: 60px 20px;
+    }
+  }
+
+  /* Override blog post component styles to match site theme */
+  :global(.blog-post-wrapper .bg-brand-100) {
+    background-color: rgba(247, 173, 31, 0.1) !important;
+  }
+
+  :global(.blog-post-wrapper .text-brand-700) {
+    color: var(--color-gold) !important;
+  }
+
+  :global(.blog-post-wrapper .text-brand-600) {
+    color: var(--color-gold) !important;
+  }
+
+  :global(.blog-post-wrapper .hover\:text-brand-700:hover) {
+    color: var(--color-gold-dark) !important;
+  }
+
+  :global(.blog-post-wrapper .border-gray-200) {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+  }
+
+  :global(.blog-post-wrapper .text-gray-900) {
+    color: white !important;
+  }
+
+  :global(.blog-post-wrapper .text-gray-600) {
+    color: var(--color-text-light) !important;
+  }
+
+  :global(.blog-post-wrapper .text-gray-500) {
+    color: var(--color-text-muted) !important;
+  }
+
+  :global(.blog-post-wrapper .bg-gray-100) {
+    background-color: var(--color-bg-card) !important;
+  }
+
+  :global(.blog-post-wrapper .hover\:bg-brand-100:hover) {
+    background-color: rgba(247, 173, 31, 0.2) !important;
+  }
+
+  :global(.blog-post-wrapper .prose) {
+    color: var(--color-text-light);
+  }
+
+  :global(.blog-post-wrapper .prose h2),
+  :global(.blog-post-wrapper .prose h3),
+  :global(.blog-post-wrapper .prose h4) {
+    color: white;
+    font-family: var(--font-family-display);
+  }
+
+  :global(.blog-post-wrapper .prose a) {
+    color: var(--color-gold);
+  }
+
+  :global(.blog-post-wrapper .prose a:hover) {
+    color: var(--color-gold-dark);
+  }
+
+  :global(.blog-post-wrapper .prose strong) {
+    color: white;
+  }
+
+  :global(.blog-post-wrapper .prose code) {
+    background-color: var(--color-bg-card);
+    color: var(--color-gold-light);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+  }
+
+  :global(.blog-post-wrapper .prose pre) {
+    background-color: var(--color-bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  :global(.blog-post-wrapper .prose table) {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  :global(.blog-post-wrapper .prose th) {
+    background-color: var(--color-bg-card);
+    color: white;
+  }
+
+  :global(.blog-post-wrapper .prose td) {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+</style>

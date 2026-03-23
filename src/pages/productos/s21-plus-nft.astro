@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import '../../styles/product-ficha.css';
+import bodyHtml from '../../ficha-bodies/s21-plus-nft.html?raw';
+---
+
+<Layout
+  title="NFT – Andes Solar Hash"
+  description="NFT productivo Andes Solar Hash #S21+ — 1% de minero real. Colección en OpenSea."
+>
+  <div class="ash-ficha ash-ficha--nft" set:html={bodyHtml} />
+</Layout>

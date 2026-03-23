@@ -1,0 +1,52 @@
+---
+---
+<script is:inline>
+  (function () {
+    function init() {
+      var root = document.querySelector('.ash-ficha');
+      if (!root) return;
+      var nav = root.querySelector('.section-anchor-nav');
+      if (!nav) return;
+      var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));
+      if (!links.length) return;
+      function setActive(hash) {
+        links.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === hash);
+        });
+      }
+      links.forEach(function (a) {
+        a.addEventListener('click', function () {
+          var h = a.getAttribute('href');
+          setTimeout(function () {
+            setActive(h);
+          }, 0);
+        });
+      });
+      var sections = links
+        .map(function (a) {
+          var id = (a.getAttribute('href') || '').slice(1);
+          return id ? document.getElementById(id) : null;
+        })
+        .filter(Boolean);
+      if (sections.length && 'IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (en) {
+              if (!en.isIntersecting) return;
+              setActive('#' + en.target.id);
+            });
+          },
+          { rootMargin: '-40% 0px -40% 0px', threshold: 0 }
+        );
+        sections.forEach(function (s) {
+          obs.observe(s);
+        });
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

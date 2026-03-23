@@ -1,0 +1,96 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  badge?: string;
+  backgroundImage?: string;
+  ctaButtons?: Array<{
+    text: string;
+    href: string;
+    variant: 'outline' | 'solid';
+    icon?: string;
+  }>;
+}
+
+const {
+  title,
+  subtitle,
+  badge,
+  backgroundImage = '/images/home/hero/hero_background.png',
+  ctaButtons = []
+} = Astro.props;
+---
+
+<section class="hero">
+  {backgroundImage && (
+    <div class="hero-bg" style={`background-image: url('${backgroundImage}')`}></div>
+  )}
+  <div class="hero-gradient"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    {badge && (
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        <span class="hero-badge-text">{badge}</span>
+      </div>
+    )}
+
+    <h1 set:html={title.replace(/\n/g, '<br />')} />
+
+    <p class="hero-sub">{subtitle}</p>
+
+    {ctaButtons.length > 0 && (
+      <div class="hero-btns">
+        {ctaButtons.map(button => (
+          button.variant === 'outline' ? (
+            <a href={button.href} class="btn-outline">
+              {button.icon && (
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <circle cx="10" cy="10" r="9" stroke="#f7ad1f" stroke-width="1.5"/>
+                  <path d="M10 6v4l3 3" stroke="#f7ad1f" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              )}
+              {button.text}
+            </a>
+          ) : (
+            <a href={button.href} class="btn-solid">{button.text}</a>
+          )
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+
+<style>
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(11,13,27,0.3) 0%, rgba(11,13,27,0.1) 50%, rgba(11,13,27,0.4) 100%);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-bg {
+      opacity: 0.4;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-bg {
+      opacity: 0.3;
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(11,13,27,0.55) 0%, rgba(11,13,27,0.3) 50%, rgba(11,13,27,0.7) 100%);
+    }
+  }
+</style>

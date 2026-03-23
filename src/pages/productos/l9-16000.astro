@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductFichaAnchorNav from '../../components/ProductFichaAnchorNav.astro';
+import '../../styles/product-ficha.css';
+import bodyHtml from '../../ficha-bodies/l9-16000.html?raw';
+---
+
+<Layout
+  title="L9 16000 – Andes Solar Hash"
+  description="Antminer L9 16000 MH/s: especificaciones y enlace de compra. Andes Solar Hash."
+>
+  <div class="ash-ficha" set:html={bodyHtml} />
+  <ProductFichaAnchorNav />
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductFichaAnchorNav from '../../components/ProductFichaAnchorNav.astro';
+import '../../styles/product-ficha.css';
+import bodyHtml from '../../ficha-bodies/s21-xp.html?raw';
+---
+
+<Layout
+  title="Bitcoin Miner S21 XP – Andes Solar Hash"
+  description="Antminer S21 XP: especificaciones oficiales, curvas de hashrate y eficiencia. Andes Solar Hash."
+>
+  <div class="ash-ficha" set:html={bodyHtml} />
+  <ProductFichaAnchorNav />
+</Layout>

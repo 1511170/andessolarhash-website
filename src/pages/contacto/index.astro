@@ -1,0 +1,940 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const faqs = [
+  {
+    question: '¿Cuál es el tiempo de respuesta promedio?',
+    answer: 'Respondemos todas las consultas en un plazo de 24 horas hábiles. Para consultas de ventas y soporte técnico urgente, nuestro equipo está disponible de lunes a viernes de 9:00 a 18:00 CLT.'
+  },
+  {
+    question: '¿Ofrecen soporte técnico para equipos comprados?',
+    answer: 'Sí, brindamos soporte técnico completo para todos los equipos ASIC adquiridos con nosotros. Esto incluye asistencia remota, diagnóstico de fallas y coordinación de reparaciones cuando sea necesario.'
+  },
+  {
+    question: '¿Puedo visitar sus instalaciones de hosting?',
+    answer: 'Sí, ofrecemos visitas programadas a nuestras instalaciones de hosting para clientes potenciales. Contáctanos para agendar una visita guiada donde podrás conocer nuestra infraestructura y operaciones.'
+  },
+  {
+    question: '¿Cómo puedo comenzar con los NFTs productivos?',
+    answer: 'Para comenzar con nuestros NFTs productivos, simplemente contáctanos seleccionando "NFT" como asunto. Nuestro equipo te guiará en el proceso de selección, compra y configuración de tu participación en la minería fraccionada.'
+  }
+];
+
+const socialLinks = [
+  { href: 'https://www.instagram.com/andessolarhash', label: 'Instagram', icon: 'instagram' },
+  { href: 'https://x.com/andessolarhash', label: 'X (Twitter)', icon: 'x' },
+  { href: 'https://www.linkedin.com/in/andes-solarhash', label: 'LinkedIn', icon: 'linkedin' }
+];
+---
+
+<Layout title="Contacto | Andes Solar Hash" description="Contáctanos para adquirir equipos de minería Bitcoin, hosting profesional o información sobre nuestros servicios en Chile.">
+  <!-- HERO SECTION -->
+  <section class="contact-hero">
+    <div class="contact-hero-gradient"></div>
+    <div class="contact-hero-content">
+      <div class="contact-hero-badge">
+        <div class="contact-hero-badge-dot"></div>
+        <span class="contact-hero-badge-text">ESTAMOS PARA AYUDARTE</span>
+      </div>
+      <h1>Contáctanos</h1>
+      <p class="contact-hero-sub">
+        Estamos aquí para ayudarte con tus necesidades de minería Bitcoin. Ya sea que busques adquirir hardware ASIC, 
+        contratar servicios de hosting profesional o simplemente tengas preguntas sobre nuestros servicios, 
+        nuestro equipo está listo para asistirte.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="contact-form-section" id="contacto">
+    <div class="contact-container">
+      <!-- Form -->
+      <div class="form-wrapper">
+        <div class="form-header">
+          <h2>Envíanos un mensaje</h2>
+          <p>Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+        </div>
+        
+        <form 
+          name="contacto"
+          method="POST"
+          action="/gracias/"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          class="contact-form"
+          id="contact-form"
+        >
+          <!-- Netlify Form Configuration -->
+          <input type="hidden" name="form-name" value="contacto" />
+          
+          <!-- Honeypot field for spam protection -->
+          <p class="hidden" style="display: none;">
+            <label>
+              No llenes este campo si eres humano: <input name="bot-field" />
+            </label>
+          </p>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre <span class="required">*</span></label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Tu nombre completo" 
+                required 
+                class="form-input"
+              />
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email <span class="required">*</span></label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="tu@email.com" 
+                required 
+                class="form-input"
+              />
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="+56 9 1234 5678" 
+                class="form-input"
+              />
+            </div>
+            
+            <div class="form-group">
+              <label for="asunto">Asunto <span class="required">*</span></label>
+              <select id="asunto" name="asunto" required class="form-select">
+                <option value="" disabled selected>Selecciona un asunto</option>
+                <option value="Consulta general">Consulta general</option>
+                <option value="Ventas">Ventas</option>
+                <option value="Hosting">Hosting</option>
+                <option value="Soporte técnico">Soporte técnico</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="message">Mensaje <span class="required">*</span></label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              placeholder="Cuéntanos cómo podemos ayudarte..." 
+              required 
+              class="form-textarea"
+            ></textarea>
+          </div>
+          
+          <div class="flex items-start gap-3 mb-4">
+            <input 
+              type="checkbox" 
+              id="privacy" 
+              name="privacy" 
+              required
+              class="mt-1 w-5 h-5 text-[#FFB800] border-gray-600 rounded focus:ring-[#FFB800] bg-gray-700" 
+            />
+            <label for="privacy" class="text-sm text-gray-300">
+              Acepto la <a href="/legal/privacidad" class="text-[#FFB800] hover:underline font-medium">política de privacidad</a> y el tratamiento de mis datos para responder a esta consulta. <span class="text-[#FFB800]">*</span>
+            </label>
+          </div>
+          
+          <button type="submit" class="form-submit">
+            <span>Enviar Mensaje</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </form>
+        
+        <!-- Mensaje de éxito (AJAX) -->
+        <div id="form-success" class="hidden mt-6 p-4 bg-green-500/10 border border-green-500/30 rounded-lg">
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+            <div>
+              <h4 class="font-semibold text-green-400">¡Mensaje enviado!</h4>
+              <p class="text-green-300/80 text-sm">Te responderemos en menos de 24 horas.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mensaje de error (AJAX) -->
+        <div id="form-error" class="hidden mt-6 p-4 bg-red-500/10 border border-red-500/30 rounded-lg">
+          <div class="flex items-center gap-3">
+            <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+            <div>
+              <h4 class="font-semibold text-red-400">Error al enviar</h4>
+              <p class="text-red-300/80 text-sm">Por favor intenta nuevamente o contáctanos por teléfono.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Info Cards -->
+      <div class="info-cards">
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h3>Email</h3>
+          <p>soporte@andessolarhash.com</p>
+          <a href="mailto:soporte@andessolarhash.com" class="info-card-link">Enviar email</a>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <h3>Dirección</h3>
+          <p>Santiago, Chile</p>
+          <span class="info-card-link map-placeholder">Ver en mapa</span>
+        </div>
+
+        <div class="info-card">
+          <div class="info-card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <h3>Horario de Atención</h3>
+          <p>Lunes a Viernes</p>
+          <p class="hours">9:00 - 18:00 CLT</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL LINKS SECTION -->
+  <section class="social-section">
+    <div class="social-container">
+      <h2>Síguenos en Redes Sociales</h2>
+      <p>Mantente al día con las últimas noticias y novedades del mundo de la minería Bitcoin</p>
+      
+      <div class="social-links">
+        {socialLinks.map(social => (
+          <a 
+            href={social.href} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="social-link"
+            aria-label={social.label}
+          >
+            {social.icon === 'instagram' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/>
+              </svg>
+            )}
+            {social.icon === 'x' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.2 2h3.4l-7.4 8.5L23 22h-6.8l-5.3-7-6.1 7H1.4l7.9-9L1 2h7l4.8 6.4L18.2 2zm-1.2 18h1.9L7.1 4H5.1l11.9 16z"/>
+              </svg>
+            )}
+            {social.icon === 'linkedin' && (
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.3-1.8 3.5 0 4.2 2.3 4.2 5.4v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6C0 23.2.8 24 1.8 24h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/>
+              </svg>
+            )}
+            <span>{social.label}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="faq-section">
+    <div class="faq-container">
+      <div class="faq-header">
+        <h2>Preguntas Frecuentes</h2>
+        <p>Respuestas a las consultas más comunes sobre nuestros servicios</p>
+      </div>
+      
+      <div class="faq-list">
+        {faqs.map((faq, index) => (
+          <div class="faq-item">
+            <button class="faq-question" data-faq={index} aria-expanded="false">
+              <span>{faq.question}</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-answer" id={`faq-answer-${index}`}>
+              <p>{faq.answer}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+        const answer = button.nextElementSibling;
+        
+        // Close all other FAQs
+        document.querySelectorAll('.faq-question').forEach(otherButton => {
+          if (otherButton !== button) {
+            otherButton.setAttribute('aria-expanded', 'false');
+            otherButton.nextElementSibling.classList.remove('open');
+          }
+        });
+        
+        // Toggle current FAQ
+        button.setAttribute('aria-expanded', !isExpanded);
+        answer.classList.toggle('open');
+      });
+    });
+
+    // Netlify Forms AJAX Handling (optional enhancement)
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+    
+    // Check if we should use AJAX (for better UX) or let Netlify handle it
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const formName = formData.get('form-name');
+      
+      // Encode form data for Netlify
+      const urlEncodedData = new URLSearchParams(formData as any).toString();
+      
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 
+            'Content-Type': 'application/x-www-form-urlencoded'
+          },
+          body: urlEncodedData
+        });
+        
+        if (response.ok) {
+          // Show success message
+          successMsg?.classList.remove('hidden');
+          errorMsg?.classList.add('hidden');
+          form.reset();
+          
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            successMsg?.classList.add('hidden');
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        // Show error message
+        errorMsg?.classList.remove('hidden');
+        successMsg?.classList.add('hidden');
+        
+        // Fallback: let form submit normally
+        form.submit();
+      }
+    });
+  </script>
+
+  <style>
+    /* =====================================================
+       CONTACT HERO SECTION
+       ===================================================== */
+    .contact-hero {
+      position: relative;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      padding: 140px 80px 80px;
+      overflow: hidden;
+      background: var(--bg-deep);
+    }
+
+    .contact-hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--bg-mid) 0%, var(--bg-deep) 50%, rgba(29, 34, 66, 0.8) 100%);
+    }
+
+    .contact-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--gold);
+      border-radius: 9999px;
+      padding: 6px 16px;
+      margin-bottom: 28px;
+    }
+
+    .contact-hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .contact-hero-badge-text {
+      font-family: 'Archivo', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    .contact-hero h1 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 900;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: 1.1;
+      background: linear-gradient(to right, var(--gold-dark), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 24px;
+    }
+
+    .contact-hero-sub {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-light);
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* =====================================================
+       CONTACT FORM SECTION
+       ===================================================== */
+    .contact-form-section {
+      padding: 80px;
+      background: linear-gradient(to bottom, var(--bg-deep), var(--bg-mid));
+    }
+
+    .contact-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    /* Form Styles */
+    .form-wrapper {
+      background: var(--bg-card);
+      border-radius: 24px;
+      padding: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .form-header {
+      margin-bottom: 32px;
+    }
+
+    .form-header h2 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .form-header p {
+      font-size: 15px;
+      color: var(--text-light);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      color: white;
+    }
+
+    .required {
+      color: var(--gold);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      background: var(--bg-deep);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 16px 18px;
+      font-family: 'Archivo', sans-serif;
+      font-size: 15px;
+      color: white;
+      transition: all 0.2s ease;
+      outline: none;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--text-muted);
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23d1d5db' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 18px;
+      padding-right: 44px;
+    }
+
+    .form-select option {
+      background: var(--bg-card);
+      color: white;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(247, 173, 31, 0.1);
+    }
+
+    .form-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--bg-deep);
+      border: none;
+      border-radius: 12px;
+      padding: 18px 32px;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(247, 173, 31, 0.3);
+    }
+
+    .form-submit svg {
+      transition: transform 0.2s ease;
+    }
+
+    .form-submit:hover svg {
+      transform: translateX(3px) translateY(-3px);
+    }
+
+    /* Info Cards */
+    .info-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .info-card {
+      background: var(--bg-card);
+      border-radius: 20px;
+      padding: 32px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.25s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(247, 173, 31, 0.3);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .info-card-icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bg-deep);
+      margin-bottom: 20px;
+    }
+
+    .info-card h3 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .info-card p {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 4px;
+    }
+
+    .info-card p.hours {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .info-card-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .info-card-link:hover {
+      opacity: 0.8;
+    }
+
+    .map-placeholder {
+      cursor: pointer;
+    }
+
+    /* =====================================================
+       SOCIAL SECTION
+       ===================================================== */
+    .social-section {
+      padding: 80px;
+      background: var(--bg-mid);
+      text-align: center;
+    }
+
+    .social-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .social-section h2 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 900;
+      font-size: 32px;
+      background: linear-gradient(to right, var(--gold-dark), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+
+    .social-section p {
+      font-size: 16px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 18px 28px;
+      color: white;
+      text-decoration: none;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.25s ease;
+    }
+
+    .social-link:hover {
+      background: var(--bg-deep);
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    }
+
+    .social-link svg {
+      color: var(--gold);
+      transition: transform 0.2s ease;
+    }
+
+    .social-link:hover svg {
+      transform: scale(1.1);
+    }
+
+    /* =====================================================
+       FAQ SECTION
+       ===================================================== */
+    .faq-section {
+      padding: 100px 80px;
+      background: var(--bg-deep);
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .faq-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .faq-header h2 {
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 900;
+      font-size: 36px;
+      background: linear-gradient(to right, var(--gold-dark), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+
+    .faq-header p {
+      font-size: 16px;
+      color: var(--text-light);
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 28px;
+      background: none;
+      border: none;
+      font-family: 'Maven Pro', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      color: white;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .faq-question:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .faq-question[aria-expanded="true"] {
+      color: var(--gold);
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+      color: var(--gold);
+    }
+
+    .faq-question[aria-expanded="true"] .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .faq-answer.open {
+      max-height: 300px;
+    }
+
+    .faq-answer p {
+      padding: 0 28px 24px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+    @media (max-width: 1024px) {
+      .contact-hero {
+        padding: 120px 40px 60px;
+        min-height: 400px;
+      }
+
+      .contact-form-section {
+        padding: 60px 40px;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .info-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .social-section,
+      .faq-section {
+        padding: 60px 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact-hero {
+        padding: 100px 20px 50px;
+        min-height: 360px;
+      }
+
+      .contact-hero h1 {
+        font-size: 36px;
+      }
+
+      .contact-hero-sub {
+        font-size: 16px;
+      }
+
+      .contact-form-section {
+        padding: 40px 16px;
+      }
+
+      .form-wrapper {
+        padding: 28px 24px;
+        border-radius: 20px;
+      }
+
+      .form-header h2 {
+        font-size: 24px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .info-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .social-section,
+      .faq-section {
+        padding: 50px 16px;
+      }
+
+      .social-section h2 {
+        font-size: 26px;
+      }
+
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .social-link {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+
+      .faq-header h2 {
+        font-size: 28px;
+      }
+
+      .faq-question {
+        padding: 20px 24px;
+        font-size: 15px;
+      }
+
+      .faq-answer p {
+        padding: 0 24px 20px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-hero h1 {
+        font-size: 32px;
+      }
+
+      .form-header h2 {
+        font-size: 22px;
+      }
+
+      .faq-header h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</Layout>
