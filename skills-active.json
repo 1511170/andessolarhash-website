@@ -4,7 +4,8 @@
     "forms-web3forms",
     "seo-ai-citations",
     "testimonials",
-    "blog"
+    "blog",
+    "image-optimizer"
   ],
   "_comment": "Skills se añaden con: node scripts/skill-add.js [nombre]"
 }

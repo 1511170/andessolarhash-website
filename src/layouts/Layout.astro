@@ -4,12 +4,170 @@ import '../styles/utilities.css';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 
+// SEO Components from skill
+interface SEOProps {
+  title: string;
+  description: string;
+  siteName?: string;
+  siteUrl?: string;
+  siteLanguage?: string;
+  siteLogo?: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  keywords?: string[];
+  noindex?: boolean;
+}
+
+interface SchemaProps {
+  type: string | string[];
+  siteUrl?: string;
+  siteName?: string;
+  siteDescription?: string;
+  siteLanguage?: string;
+  siteLogo?: string;
+  data?: Record<string, any>;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  faqs?: Array<{ q: string; a: string }>;
+}
+
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  keywords?: string[];
+  schemaType?: string[];
+  schemaData?: Record<string, any>;
+  breadcrumbs?: Array<{ name: string; url: string }>;
+  faqs?: Array<{ q: string; a: string }>;
+  noindex?: boolean;
 }
 
-const { title, description = 'Minería de Bitcoin en Chile con soporte local. Venta de ASICs, hosting y NFTs productivos.' } = Astro.props;
+const { 
+  title, 
+  description = 'Minería de Bitcoin en Chile con soporte local. Venta de ASICs Antminer S21, hosting minero profesional y NFTs productivos.',
+  image = '/images/home/hero/hero_main.webp',
+  type = 'website',
+  keywords = ['minería bitcoin chile', 'ASIC Antminer', 'hosting minero', 'NFT minería', 'Bitcoin'],
+  schemaType = ['Organization', 'WebSite'],
+  schemaData = {},
+  breadcrumbs = [],
+  faqs = [],
+  noindex = false
+} = Astro.props;
+
+const siteUrl = 'https://andessolarhash.com';
+const siteName = 'Andes Solar Hash';
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+const canonicalUrl = Astro.url.href;
+
+// Schema builders
+const organizationSchema = {
+  "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
+  "name": siteName,
+  "url": siteUrl,
+  "logo": `${siteUrl}/images/andessh_001.png`,
+  "description": description,
+  "email": "soporte@andessolarhash.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Manquehue Norte 151, Oficina 1205",
+    "addressLocality": "Las Condes",
+    "addressRegion": "Santiago",
+    "addressCountry": "CL"
+  },
+  "knowsAbout": ["Minería Bitcoin", "ASIC Antminer", "Hosting Minero", "NFTs Productivos"]
+};
+
+const webSiteSchema = {
+  "@type": "WebSite",
+  "@id": `${siteUrl}/#website`,
+  "url": siteUrl,
+  "name": siteName,
+  "description": description,
+  "publisher": { "@id": `${siteUrl}/#organization` },
+  "inLanguage": "es-CL"
+};
+
+const localBusinessSchema = {
+  "@type": "LocalBusiness",
+  "@id": `${siteUrl}/#localbusiness`,
+  "name": siteName,
+  "image": `${siteUrl}/images/andessh_001.png`,
+  "url": siteUrl,
+  "email": "soporte@andessolarhash.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Manquehue Norte 151, Oficina 1205",
+    "addressLocality": "Las Condes",
+    "addressRegion": "Santiago",
+    "addressCountry": "CL"
+  },
+  "priceRange": "$$$"
+};
+
+const serviceSchema = (data: any) => ({
+  "@type": "Service",
+  "provider": { "@id": `${siteUrl}/#organization` },
+  "areaServed": "Chile",
+  "name": data.name || "",
+  "description": data.description || "",
+  "serviceType": data.serviceType || ""
+});
+
+const breadcrumbSchema = (items: any[]) => ({
+  "@type": "BreadcrumbList",
+  "itemListElement": items.map((item, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": item.name,
+    "item": item.url.startsWith('http') ? item.url : `${siteUrl}${item.url}`
+  }))
+});
+
+const faqSchema = (items: any[]) => ({
+  "@type": "FAQPage",
+  "mainEntity": items.map((faq) => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+});
+
+// Build final graph
+const graph: any[] = [];
+for (const t of schemaType) {
+  switch (t) {
+    case 'Organization':
+      graph.push(organizationSchema);
+      break;
+    case 'WebSite':
+      graph.push(webSiteSchema);
+      break;
+    case 'LocalBusiness':
+      graph.push(localBusinessSchema);
+      break;
+    case 'Service':
+      graph.push(serviceSchema(schemaData));
+      break;
+    case 'BreadcrumbList':
+      if (breadcrumbs.length > 0) graph.push(breadcrumbSchema(breadcrumbs));
+      break;
+    case 'FAQPage':
+      if (faqs.length > 0) graph.push(faqSchema(faqs));
+      break;
+  }
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": graph
+};
 ---
 
 <!DOCTYPE html>
@@ -18,7 +176,51 @@ const { title, description = 'Minería de Bitcoin en Chile con soporte local. Ve
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
+  
+  <!-- Canonical -->
+  <link rel="canonical" href={canonicalUrl} />
+  
+  <!-- Robots -->
+  {noindex ? (
+    <meta name="robots" content="noindex, nofollow" />
+  ) : (
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  )}
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content={title} />
   <meta name="description" content={description} />
+  {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+  <meta name="author" content={siteName} />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content={type} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:site_name" content={siteName} />
+  <meta property="og:image" content={fullImageUrl} />
+  <meta property="og:image:alt" content={title} />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={fullImageUrl} />
+  
+  <!-- AI Citations -->
+  <meta name="citation_title" content={title} />
+  <meta name="citation_author" content={siteName} />
+  <meta name="citation_language" content="es" />
+  <meta name="ai-purpose" content="informational" />
+  <meta name="ai-content-type" content={type} />
+  <meta name="speakable" content="#main-content" />
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,15 +229,15 @@ const { title, description = 'Minería de Bitcoin en Chile con soporte local. Ve
   
   <!-- Favicon -->
   <link rel="icon" href="/images/favicons/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+  <link rel="icon" type="image/webp" sizes="16x16" href="/images/favicons/favicon-16x16.webp" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="/images/favicons/favicon-32x32.webp" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.webp" />
   <link rel="manifest" href="/images/favicons/site.webmanifest" />
   <meta name="theme-color" content="#0b0d1b" />
 </head>
 <body class="antialiased">
   <Navbar />
-  <main>
+  <main id="main-content">
     <slot />
   </main>
   <Footer />
