@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Análisis"
 tags: ["electricidad", "costos", "chile", "comparativa", "tarifas"]
-image: "/images/blog/posts/costo-electricidad-hero.png"
+image: "/images/blog/posts/costo-electricidad-hero.webp"
 imageAlt: "Comparativa de costos de electricidad para minería Bitcoin - Chile vs Mundo"
-ogImage: "/images/blog/posts/costo-electricidad-hero.png"
+ogImage: "/images/blog/posts/costo-electricidad-hero.webp"
 published: true
 featured: false
 readingTime: 9
@@ -21,7 +21,7 @@ El **costo de electricidad para minería** representa el gasto operacional más 
 
 Este análisis profundo compara las tarifas eléctricas chilenas contra las principales regiones mineras globales, examina las variables que afectan tu factura y propone estrategias concretas para reducir el costo por kWh en tu operación.
 
-![Comparativa global de costos de electricidad para minería](/images/blog/posts/costo-electricidad-hero.png)
+![Comparativa global de costos de electricidad para minería](/images/blog/posts/costo-electricidad-hero.webp)
 
 ## ¿Por Qué la Electricidad Define la Rentabilidad Minera?
 
@@ -42,7 +42,7 @@ Para un ASIC de 3,500W (3.5 kW) operando en Chile con tarifa residencial promedi
 
 El costo de electricidad varía dramáticamente según la región, regulación local y fuente de generación. La siguiente tabla presenta tarifas promedio para consumo industrial/minero en las principales jurisdicciones:
 
-![Mapa comparativo de costos eléctricos - Chile vs otros países](/images/blog/posts/costo-electricidad-chile.png)
+![Mapa comparativo de costos eléctricos - Chile vs otros países](/images/blog/posts/costo-electricidad-chile.webp)
 
 ### Ranking Global de Costos por kWh (USD)
 
@@ -96,7 +96,7 @@ El costo de electricidad chileno se compone de:
 
 La diferencia entre pagar $0.15 y $0.08 por kWh puede significar la viabilidad completa de una operación minera. Analicemos el impacto con datos reales:
 
-![Impacto del costo eléctrico en la rentabilidad minera](/images/blog/posts/costo-impacto-rentabilidad.png)
+![Impacto del costo eléctrico en la rentabilidad minera](/images/blog/posts/costo-impacto-rentabilidad.webp)
 
 ### Caso de Estudio: Antminer S21 (200 TH/s)
 

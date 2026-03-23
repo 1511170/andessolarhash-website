@@ -32,7 +32,7 @@ const {
 
 const siteUrl = "https://andessolarhash.com";
 const canonicalUrl = `${siteUrl}/blog/${slug}`;
-const articleImage = ogImage || image || `${siteUrl}/images/og-default.png`;
+const articleImage = ogImage || image || `${siteUrl}/images/og-default.webp`;
 
 // Generate Article Schema (BlogPosting)
 const articleSchema = {
@@ -56,7 +56,7 @@ const articleSchema = {
     "name": "Andes Solar Hash",
     "logo": {
       "@type": "ImageObject",
-      "url": `${siteUrl}/images/andessh_001.png`
+      "url": `${siteUrl}/images/andessh_001.webp`
     }
   },
   "mainEntityOfPage": {
@@ -103,7 +103,7 @@ const organizationSchema = {
   "url": siteUrl,
   "logo": {
     "@type": "ImageObject",
-    "url": `${siteUrl}/images/andessh_001.png`
+    "url": `${siteUrl}/images/andessh_001.webp`
   },
   "description": "Minería de Bitcoin en Chile con soporte local. Venta de ASICs, hosting y NFTs productivos.",
   "address": {

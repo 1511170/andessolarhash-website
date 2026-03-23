@@ -5,13 +5,13 @@ date: 2024-03-01T00:00:00.000Z
 author: "Andes Solar Hash"
 category: "NFT"
 tags: ["nft", "web3", "mineria", "inversion"]
-image: "/images/blog/posts/nft-mining-new.png"
+image: "/images/blog/posts/nft-mining-new.webp"
 published: true
 ---
 
 Los NFTs productivos de minería Bitcoin representan una innovación que democratiza el acceso a la minería de criptomonedas, eliminando barreras técnicas y financieras tradicionales.
 
-![Wallet digital mostrando colección de NFTs de minería](/images/blog/posts/wallet-nft-collection.png)
+![Wallet digital mostrando colección de NFTs de minería](/images/blog/posts/wallet-nft-collection.webp)
 
 ## ¿Qué son los NFTs Productivos?
 
@@ -56,7 +56,7 @@ NFT → Hashrate Real → Equipos ASIC → Minería BTC → Distribución de Rec
 | Liquidez | Baja (vender equipos) | Alta (marketplace) |
 | Barrera de entrada | Alta | Muy baja |
 
-![Marketplace de NFTs para hashrate de minería](/images/blog/posts/nft-marketplace.png)
+![Marketplace de NFTs para hashrate de minería](/images/blog/posts/nft-marketplace.webp)
 
 ## Tipos de NFTs Disponibles
 

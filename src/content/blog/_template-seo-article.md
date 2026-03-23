@@ -6,9 +6,9 @@ modifiedDate: 2024-01-15T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "[Categoría]"
 tags: ["tag-1", "tag-2", "tag-3", "tag-4", "tag-5"]
-image: "/images/blog/posts/[slug]-hero.png"
+image: "/images/blog/posts/[slug]-hero.webp"
 imageAlt: "Descripción optimizada de la imagen con keyword principal"
-ogImage: "/images/blog/posts/[slug]-og.png"
+ogImage: "/images/blog/posts/[slug]-og.webp"
 published: true
 featured: false
 readingTime: 8
@@ -21,7 +21,7 @@ canonical: "https://andessolarhash.com/blog/[slug]"
 
 Ya seas un principiante buscando iniciar en el mundo de la minería de criptomonedas o un operador experimentado queriendo optimizar tus operaciones, este artículo te proporcionará información valiosa respaldada por datos actualizados y la experiencia de nuestro equipo en Andes Solar Hash.
 
-![[Descripción optimizada con keyword principal]](/images/blog/posts/[slug]-hero.png)
+![[Descripción optimizada con keyword principal]](/images/blog/posts/[slug]-hero.webp)
 
 ## ¿Qué es [Keyword Principal]?
 
@@ -39,7 +39,7 @@ Ya seas un principiante buscando iniciar en el mundo de la minería de criptomon
 
 El panorama de la minería de Bitcoin ha evolucionado significativamente después del halving de 2024. Según datos de [CoinMetrics](https://coinmetrics.io), la dificultad de red ha aumentado un X% y los mineros eficientes están viendo [estadísticas relevantes].
 
-![[Descripción de imagen interna relacionada]](/images/blog/posts/[slug]-img2.png)
+![[Descripción de imagen interna relacionada]](/images/blog/posts/[slug]-img2.webp)
 
 ## Beneficios de [Keyword Principal]
 
@@ -247,4 +247,4 @@ Este artículo incluye automáticamente:
 
 **¿Te gustaría implementar [keyword principal] en tu operación?** 
 
-[![Contáctanos](/images/cta-contacto.png)](/contacto/)
+[![Contáctanos](/images/cta-contacto.webp)](/contacto/)

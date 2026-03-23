@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Inversión"
 tags: ["roi", "retorno", "inversion", "calculadora", "proyecciones"]
-image: "/images/blog/posts/roi-mineria-hero.png"
+image: "/images/blog/posts/roi-mineria-hero.webp"
 imageAlt: "Calculadora de ROI para minería Bitcoin - Análisis de retorno de inversión ASIC"
-ogImage: "/images/blog/posts/roi-mineria-hero.png"
+ogImage: "/images/blog/posts/roi-mineria-hero.webp"
 published: true
 featured: false
 readingTime: 10
@@ -21,7 +21,7 @@ Calcular el **ROI en minería Bitcoin** en 2026 requiere un análisis ajustado a
 
 Este artículo proporciona una calculadora de rentabilidad completa, modelos financieros actualizados y proyecciones de escenarios para el período 2026-2027, permitiéndote tomar decisiones de inversión informadas y fundamentadas en datos. A 2 años del halving 2024, el mercado minero ha consolidado su estructura post-evento.
 
-![Calculadora de ROI para minería Bitcoin y análisis de rentabilidad](/images/blog/posts/roi-mineria-hero.png)
+![Calculadora de ROI para minería Bitcoin y análisis de rentabilidad](/images/blog/posts/roi-mineria-hero.webp)
 
 ## Fundamentos del ROI en Minería Bitcoin
 
@@ -56,7 +56,7 @@ Parámetros actuales (Marzo 2026):
 - **Costo eléctrico**: $0.08 USD/kWh (hosting Chile)
 - **Precio equipo**: $4,500 USD
 
-![Calculadora interactiva de rentabilidad minera](/images/blog/posts/roi-calculadora.png)
+![Calculadora interactiva de rentabilidad minera](/images/blog/posts/roi-calculadora.webp)
 
 ### Tabla de Rentabilidad Mensual
 
@@ -83,7 +83,7 @@ Parámetros actuales (Marzo 2026):
 
 El futuro del ROI minero 2 años post-halving depende de la consolidación del hashrate global y la estabilidad del precio de BTC.
 
-![Proyecciones de ROI minero para 2024-2025](/images/blog/posts/roi-proyecciones.png)
+![Proyecciones de ROI minero para 2024-2025](/images/blog/posts/roi-proyecciones.webp)
 
 ### Escenario 1: Bull Market Continuado (Optimista)
 

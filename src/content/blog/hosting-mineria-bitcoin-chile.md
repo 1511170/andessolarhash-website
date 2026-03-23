@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Hosting"
 tags: ["hosting", "chile", "mineria", "colocation", "datacenter"]
-image: "/images/blog/posts/hosting-chile-hero.png"
+image: "/images/blog/posts/hosting-chile-hero.webp"
 imageAlt: "Hosting de minería Bitcoin en Chile - Data center profesional para ASICs"
-ogImage: "/images/blog/posts/hosting-chile-hero.png"
+ogImage: "/images/blog/posts/hosting-chile-hero.webp"
 published: true
 featured: false
 readingTime: 8
@@ -21,7 +21,7 @@ canonical: "https://andessolarhash.com/blog/hosting-mineria-bitcoin-chile"
 
 En este artículo completo, analizamos por qué Chile se posiciona como hub minero latinoamericano, cómo funciona el colocation para equipos ASIC y qué factores debes evaluar antes de confiar tu hardware a un proveedor de hosting.
 
-![Data center profesional para minería Bitcoin en Chile](/images/blog/posts/hosting-chile-hero.png)
+![Data center profesional para minería Bitcoin en Chile](/images/blog/posts/hosting-chile-hero.webp)
 
 ## ¿Qué es el Hosting de Minería Bitcoin? (Colocation)
 
@@ -42,7 +42,7 @@ El **hosting o colocation de minería** es un servicio donde envías tus equipos
 
 La decisión entre operar desde tu hogar o migrar a un data center profesional puede significar la diferencia entre una operación rentable y una que consume más recursos de los que genera.
 
-![Comparación entre hosting profesional y minería en casa](/images/blog/posts/hosting-vs-casa.png)
+![Comparación entre hosting profesional y minería en casa](/images/blog/posts/hosting-vs-casa.webp)
 
 ### Tabla Comparativa: Casa vs Data Center
 
@@ -61,7 +61,7 @@ La decisión entre operar desde tu hogar o migrar a un data center profesional p
 
 Chile ofrece condiciones únicas que lo posicionan como destino preferido para el colocation de equipos mineros:
 
-![Beneficios del hosting de minería en Chile](/images/blog/posts/hosting-beneficios.png)
+![Beneficios del hosting de minería en Chile](/images/blog/posts/hosting-beneficios.webp)
 
 ### 1. Costo de Energía Competitivo
 El Sistema Eléctrico Nacional de Chile presenta tarifas significativamente menores al promedio latinoamericano, especialmente en regiones con alta generación solar y eólica. Los data centers pueden acceder a tarifas industriales que un hogar nunca conseguiría.

@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Avanzado"
 tags: ["overclocking", "asic", "avanzado", "hashrate", "rendimiento"]
-image: "/images/blog/posts/overclocking-hero.png"
+image: "/images/blog/posts/overclocking-hero.webp"
 imageAlt: "Guía técnica de overclocking para equipos ASIC de minería Bitcoin"
-ogImage: "/images/blog/posts/overclocking-hero.png"
+ogImage: "/images/blog/posts/overclocking-hero.webp"
 published: true
 featured: false
 readingTime: 12
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/overclocking-mineros-bitcoin"
 
 El **overclocking en mineros Bitcoin** es una práctica avanzada que busca extraer el máximo rendimiento de los equipos ASIC, superando las especificaciones de fábrica para aumentar el hashrate. Sin embargo, este proceso técnico complejo conlleva riesgos significativos que pueden resultar en daño permanente del hardware si no se realiza correctamente. Esta guía exhaustiva te proporcionará el conocimiento necesario para decidir si el overclocking es adecuado para tu operación y cómo implementarlo de manera segura.
 
-![Guía de overclocking para mineros Bitcoin](/images/blog/posts/overclocking-hero.png)
+![Guía de overclocking para mineros Bitcoin](/images/blog/posts/overclocking-hero.webp)
 
 ## ¿Qué es el Overclocking en Minería?
 
@@ -58,7 +58,7 @@ En entornos con **energía eléctrica extremadamente barata** (<$0.03/kWh), el o
 
 Para equipos más antiguos cercanos a la obsolescencia, el overclocking puede extender la rentabilidad operacional algunos meses adicionales.
 
-![Beneficios del overclocking](/images/blog/posts/overclocking-beneficios.png)
+![Beneficios del overclocking](/images/blog/posts/overclocking-beneficios.webp)
 
 ## Riesgos del Overclocking
 
@@ -95,7 +95,7 @@ El overclocking típicamente resulta en:
 - Aumento de consumo: +25-40%
 - Eficiencia resultante: Peor que stock
 
-![Riesgos del overclocking](/images/blog/posts/overclocking-riesgos.png)
+![Riesgos del overclocking](/images/blog/posts/overclocking-riesgos.webp)
 
 ## Cómo Realizar Overclocking de Forma Segura
 

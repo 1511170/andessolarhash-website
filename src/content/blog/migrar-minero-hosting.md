@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Guías"
 tags: ["migracion", "hosting", "envio", "setup", "guia"]
-image: "/images/blog/posts/migrar-hosting-hero.png"
+image: "/images/blog/posts/migrar-hosting-hero.webp"
 imageAlt: "Guía completa para migrar mineros ASIC a servicio de hosting profesional"
-ogImage: "/images/blog/posts/migrar-hosting-hero.png"
+ogImage: "/images/blog/posts/migrar-hosting-hero.webp"
 published: true
 featured: false
 readingTime: 9
@@ -21,7 +21,7 @@ canonical: "https://andessolarhash.com/blog/migrar-minero-hosting"
 
 Esta guía completa te lleva paso a paso por todo el proceso: desde la preparación inicial hasta el primer hashrate reportado desde tu nueva ubicación, incluyendo checklists descargables y mejores prácticas validadas por cientos de migraciones exitosas.
 
-![Proceso de migración de mineros a hosting profesional](/images/blog/posts/migrar-hosting-hero.png)
+![Proceso de migración de mineros a hosting profesional](/images/blog/posts/migrar-hosting-hero.webp)
 
 ## ¿Por Qué Migrar a Hosting Profesional?
 
@@ -48,7 +48,7 @@ Antes de sumergirnos en el "cómo", validemos el "por qué". Los mineros típica
 
 La preparación es la clave del éxito. No esperes al último momento.
 
-![Checklist completo para migración de mineros](/images/blog/posts/migrar-checklist.png)
+![Checklist completo para migración de mineros](/images/blog/posts/migrar-checklist.webp)
 
 ### Semanas 1-2: Investigación y Selección
 
@@ -88,7 +88,7 @@ La preparación es la clave del éxito. No esperes al último momento.
 
 El transporte es donde ocurren la mayoría de los daños. No escatimes en protección.
 
-![Empaque correcto de equipos ASIC para envío seguro](/images/blog/posts/migrar-empaque.png)
+![Empaque correcto de equipos ASIC para envío seguro](/images/blog/posts/migrar-empaque.webp)
 
 ### Materiales Necesarios
 

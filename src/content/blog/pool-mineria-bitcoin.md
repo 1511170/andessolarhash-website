@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Guías"
 tags: ["pool", "mineria", "bitcoin", "guia", "configuracion"]
-image: "/images/blog/posts/pool-mineria-hero.png"
+image: "/images/blog/posts/pool-mineria-hero.webp"
 imageAlt: "Guía completa de pools de minería Bitcoin y comparativa 2024"
-ogImage: "/images/blog/posts/pool-mineria-hero.png"
+ogImage: "/images/blog/posts/pool-mineria-hero.webp"
 published: true
 featured: false
 readingTime: 10
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/pool-mineria-bitcoin"
 
 Elegir el **pool de minería Bitcoin** adecuado es una de las decisiones más importantes para cualquier minero, ya sea que operes un solo ASIC o una granja industrial. Un pool puede marcar la diferencia entre ingresos estables y predecibles versus fluctuaciones extremas que dificultan la planificación financiera. Esta guía completa te ayudará a entender qué es un pool, cómo funcionan y cuál es el mejor pool de minería para tu operación específica.
 
-![Guía de pools de minería Bitcoin](/images/blog/posts/pool-mineria-hero.png)
+![Guía de pools de minería Bitcoin](/images/blog/posts/pool-mineria-hero.webp)
 
 ## ¿Qué es un Pool de Minería Bitcoin?
 
@@ -103,7 +103,7 @@ Algunos pools tienen acuerdos con exchanges o utilizan estrategias de fee bumpin
 - **Contras**: Fee variable según método de pago
 - **Ideal para**: Mineros con presupuestos pequeños
 
-![Configuración de pool de minería](/images/blog/posts/pool-mineria-setup.png)
+![Configuración de pool de minería](/images/blog/posts/pool-mineria-setup.webp)
 
 ## Cómo Configurar tu Pool de Minería
 

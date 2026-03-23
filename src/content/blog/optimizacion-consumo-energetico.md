@@ -5,7 +5,7 @@ date: 2024-02-28T00:00:00.000Z
 author: "Andes Solar Hash"
 category: "Tecnología"
 tags: ["eficiencia", "energia", "optimizacion", "costos"]
-image: "/images/blog/posts/energy-optimization-new.png"
+image: "/images/blog/posts/energy-optimization-new.webp"
 published: true
 ---
 
@@ -29,7 +29,7 @@ Ejemplo S21 XP:
 3.645 kW × 24h × $0.088/kWh = $7.68 USD/día
 ```
 
-![Sistema de refrigeración avanzado para minería Bitcoin](/images/blog/posts/cooling-system.png)
+![Sistema de refrigeración avanzado para minería Bitcoin](/images/blog/posts/cooling-system.webp)
 
 ## Estrategias de Optimización
 
@@ -90,7 +90,7 @@ Reducir frecuencia de operación puede mejorar eficiencia:
 
 **Ventaja adicional**: Reducción de huella de carbono mejora imagen corporativa
 
-![Infraestructura eléctrica y optimización de energía](/images/blog/posts/power-efficiency.png)
+![Infraestructura eléctrica y optimización de energía](/images/blog/posts/power-efficiency.webp)
 
 ## Monitoreo y Análisis
 

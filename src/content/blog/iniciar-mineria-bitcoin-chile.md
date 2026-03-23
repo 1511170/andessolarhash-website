@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Guías"
 tags: ["guia", "principiantes", "chile", "mineria", "bitcoin"]
-image: "/images/blog/posts/iniciar-mineria-chile-hero.png"
+image: "/images/blog/posts/iniciar-mineria-chile-hero.webp"
 imageAlt: "Guía completa para iniciar minería Bitcoin en Chile con equipos ASIC"
-ogImage: "/images/blog/posts/iniciar-mineria-chile-hero.png"
+ogImage: "/images/blog/posts/iniciar-mineria-chile-hero.webp"
 published: true
 featured: false
 readingTime: 12
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/iniciar-mineria-bitcoin-chile"
 
 **Iniciar minería Bitcoin en Chile** nunca ha sido tan accesible como en 2026. Con la creciente adopción de criptomonedas en Latinoamérica y el acceso a equipos de minería de última generación, más chilenos están descubriendo las oportunidades de generar ingresos pasivos a través de la validación de la red Bitcoin. Esta guía completa te mostrará exactamente cómo comenzar tu operación minera desde cero, considerando las particularidades del mercado chileno.
 
-![Guía de inicio de minería Bitcoin en Chile](/images/blog/posts/iniciar-mineria-chile-hero.png)
+![Guía de inicio de minería Bitcoin en Chile](/images/blog/posts/iniciar-mineria-chile-hero.webp)
 
 ## ¿Qué es la Minería de Bitcoin?
 
@@ -55,7 +55,7 @@ Empresas como Andes Solar Hash facilitan el acceso a equipos Bitmain Antminer S2
 
 Operar un minero te sumerge en el ecosistema Bitcoin, permitiéndote comprender mejor la tecnología blockchain y sus aplicaciones futuras.
 
-![Proceso paso a paso para iniciar minería](/images/blog/posts/iniciar-mineria-chile-paso-a-paso.png)
+![Proceso paso a paso para iniciar minería](/images/blog/posts/iniciar-mineria-chile-paso-a-paso.webp)
 
 ## Cómo Iniciar tu Operación de Minería en Chile
 
@@ -99,7 +99,7 @@ En Chile, la minería de Bitcoin genera renta de segunda categoría y debe decla
 - Consultar con un contador especializado en criptoactivos
 - Considerar la formación de una empresa para operaciones mayores a 10 equipos
 
-![Equipos ASIC para minería en Chile](/images/blog/posts/iniciar-mineria-chile-equipos.png)
+![Equipos ASIC para minería en Chile](/images/blog/posts/iniciar-mineria-chile-equipos.webp)
 
 ### Paso 5: Optimización y Monitoreo
 

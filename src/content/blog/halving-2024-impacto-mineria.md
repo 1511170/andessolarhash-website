@@ -5,19 +5,19 @@ date: 2024-03-15T00:00:00.000Z
 author: "Andes Solar Hash"
 category: "Bitcoin"
 tags: ["halving", "bitcoin", "minería", "rentabilidad"]
-image: "/images/blog/posts/bitcoin-mining-new.png"
+image: "/images/blog/posts/bitcoin-mining-new.webp"
 published: true
 ---
 
 El halving de Bitcoin 2024 representa uno de los eventos más significativos en el ecosistema de minería de criptomonedas. Este fenómeno, que ocurre aproximadamente cada cuatro años, reduce a la mitad la recompensa por bloque minado, impactando directamente la rentabilidad de las operaciones mineras.
 
-![Línea de tiempo del halving de Bitcoin mostrando las 4 épocas](/images/blog/posts/halving-timeline.png)
+![Línea de tiempo del halving de Bitcoin mostrando las 4 épocas](/images/blog/posts/halving-timeline.webp)
 
 ## ¿Qué es el Halving?
 
 El halving es un mecanismo programado en el protocolo de Bitcoin que reduce la recompensa de minería de 6.25 BTC a 3.125 BTC por bloque. Este evento está diseñado para controlar la inflación y mantener la escasez de Bitcoin.
 
-![Competencia en minería de Bitcoin - mineros digitales compitiendo](/images/blog/posts/mining-competition.png)
+![Competencia en minería de Bitcoin - mineros digitales compitiendo](/images/blog/posts/mining-competition.webp)
 
 ## Impacto en la Minería
 

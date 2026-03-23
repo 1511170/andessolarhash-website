@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Guías"
 tags: ["mantenimiento", "asic", "reparacion", "preventivo", "guia"]
-image: "/images/blog/posts/mantenimiento-asic-hero.png"
+image: "/images/blog/posts/mantenimiento-asic-hero.webp"
 imageAlt: "Guía completa de mantenimiento preventivo para equipos ASIC de minería"
-ogImage: "/images/blog/posts/mantenimiento-asic-hero.png"
+ogImage: "/images/blog/posts/mantenimiento-asic-hero.webp"
 published: true
 featured: false
 readingTime: 14
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/mantenimiento-asic"
 
 El **mantenimiento de ASICs** es el factor más subestimado en la operación rentable de una granja de minería Bitcoin. Mientras muchos mineros se enfocan exclusivamente en la adquisición de hardware y la optimización de costos eléctricos, descuidan las prácticas de mantenimiento preventivo que pueden extender la vida útil de sus equipos en años y evitar pérdidas significativas por tiempo de inactividad. Esta guía completa te enseñará todo lo necesario para mantener tus ASICs funcionando como nuevos.
 
-![Mantenimiento de equipos ASIC](/images/blog/posts/mantenimiento-asic-hero.png)
+![Mantenimiento de equipos ASIC](/images/blog/posts/mantenimiento-asic-hero.webp)
 
 ## ¿Por Qué es Crítico el Mantenimiento ASIC?
 
@@ -42,7 +42,7 @@ Los equipos ASIC operan 24/7 en condiciones extremas de temperatura y carga. Sin
 
 ### Checklist de Mantenimiento Semanal
 
-![Checklist de mantenimiento ASIC](/images/blog/posts/mantenimiento-checklist.png)
+![Checklist de mantenimiento ASIC](/images/blog/posts/mantenimiento-checklist.webp)
 
 | Tarea | Frecuencia | Tiempo Estimado | Importancia |
 |-------|------------|-----------------|-------------|
@@ -68,7 +68,7 @@ Los equipos ASIC operan 24/7 en condiciones extremas de temperatura y carga. Sin
 
 ### Materiales Necesarios
 
-![Herramientas de mantenimiento ASIC](/images/blog/posts/mantenimiento-herramientas.png)
+![Herramientas de mantenimiento ASIC](/images/blog/posts/mantenimiento-herramientas.webp)
 
 | Herramienta | Uso | Recomendación |
 |-------------|-----|---------------|

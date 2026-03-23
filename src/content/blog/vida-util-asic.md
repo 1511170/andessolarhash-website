@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Educación"
 tags: ["lifespan", "asic", "durabilidad", "depreciacion", "vida-util"]
-image: "/images/blog/posts/lifespan-asic-hero.png"
+image: "/images/blog/posts/lifespan-asic-hero.webp"
 imageAlt: "Factores que determinan la vida útil y durabilidad de equipos ASIC"
-ogImage: "/images/blog/posts/lifespan-asic-hero.png"
+ogImage: "/images/blog/posts/lifespan-asic-hero.webp"
 published: true
 featured: false
 readingTime: 11
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/vida-util-asic"
 
 La pregunta **"¿cuánto dura un ASIC?"** es crucial para cualquier inversión en minería Bitcoin. Comprender el **lifespan real** de estos equipos, los factores que afectan su **durabilidad** y cómo se produce la **depreciación** a lo largo del tiempo te permitirá tomar decisiones informadas que maximicen tu retorno de inversión. Esta guía profundiza en todos los aspectos que determinan cuánto tiempo puedes esperar que tus equipos sigan generando ganancias.
 
-![Vida útil y durabilidad de ASICs](/images/blog/posts/lifespan-asic-hero.png)
+![Vida útil y durabilidad de ASICs](/images/blog/posts/lifespan-asic-hero.webp)
 
 ## ¿Qué Determina la Vida Útil de un ASIC?
 
@@ -57,7 +57,7 @@ La temperatura es el factor más crítico. La regla empírica de Arrhenius indic
 
 **Recomendación**: Mantener temperaturas de chip entre 60-75°C para máxima longevidad.
 
-![Factores que afectan la vida útil](/images/blog/posts/lifespan-factores.png)
+![Factores que afectan la vida útil](/images/blog/posts/lifespan-factores.webp)
 
 ### 2. Calidad del Mantenimiento
 
@@ -100,7 +100,7 @@ Los ASICs se deprecian más rápido que la mayoría de activos tecnológicos deb
 - Incremento continuo de la dificultad de red
 - Lanzamientos frecuentes de nuevos modelos
 
-![Curva de depreciación de ASICs](/images/blog/posts/lifespan-depreciacion.png)
+![Curva de depreciación de ASICs](/images/blog/posts/lifespan-depreciacion.webp)
 
 ### Tabla de Depreciación Estimada
 

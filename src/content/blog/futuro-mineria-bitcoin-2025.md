@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Tendencias"
 tags: ["futuro", "tendencias", "predicciones", "2025", "post-halving"]
-image: "/images/blog/posts/futuro-mineria-hero.png"
+image: "/images/blog/posts/futuro-mineria-hero.webp"
 imageAlt: "Futuro de la minería Bitcoin post-halving - Tendencias y predicciones 2024-2025"
-ogImage: "/images/blog/posts/futuro-mineria-hero.png"
+ogImage: "/images/blog/posts/futuro-mineria-hero.webp"
 published: true
 featured: false
 readingTime: 10
@@ -21,7 +21,7 @@ El **futuro de la minería Bitcoin** en 2026-2027 se presenta desde la perspecti
 
 Este análisis predictivo examina las tendencias emergentes, las proyecciones de hashrate, la evolución tecnológica y los escenarios probables para el ecosistema minero 2026-2027.
 
-![Futuro de la minería Bitcoin 2026-2027](/images/blog/posts/futuro-mineria-hero.png)
+![Futuro de la minería Bitcoin 2026-2027](/images/blog/posts/futuro-mineria-hero.webp)
 
 ## Contexto: 2 Años Después del Halving 2024
 
@@ -43,7 +43,7 @@ El halving de abril 2024 redujo las recompensas mineras de 6.25 a 3.125 BTC por 
 
 ## Tendencias Definitorias 2026-2027
 
-![Tendencias emergentes en minería Bitcoin 2026-2027](/images/blog/posts/futuro-tendencias.png)
+![Tendencias emergentes en minería Bitcoin 2026-2027](/images/blog/posts/futuro-tendencias.webp)
 
 ### Tendencia 1: Consolidación del Mercado
 
@@ -94,7 +94,7 @@ Los ETFs spot de Bitcoin han creado demanda institucional que se extiende a la m
 
 ## Proyecciones de Hashrate Global 2026-2027
 
-![Proyecciones de hashrate y tecnología minera 2026-2027](/images/blog/posts/futuro-tecnologia.png)
+![Proyecciones de hashrate y tecnología minera 2026-2027](/images/blog/posts/futuro-tecnologia.webp)
 
 ### Escenarios de Crecimiento de Hashrate
 

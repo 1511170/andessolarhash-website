@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Herramientas"
 tags: ["monitoreo", "remoto", "herramientas", "apps", "control"]
-image: "/images/blog/posts/monitoreo-remoto-hero.png"
+image: "/images/blog/posts/monitoreo-remoto-hero.webp"
 imageAlt: "Monitoreo remoto de mineros ASIC - Dashboard y herramientas de control"
-ogImage: "/images/blog/posts/monitoreo-remoto-hero.png"
+ogImage: "/images/blog/posts/monitoreo-remoto-hero.webp"
 published: true
 featured: false
 readingTime: 8
@@ -21,7 +21,7 @@ El **monitoreo remoto de mineros** se ha convertido en una capacidad esencial pa
 
 Esta guía exhaustiva explora las herramientas líderes del mercado, cómo configurarlas correctamente, y las mejores prácticas para mantener visibilidad total sobre tu flota de ASICs las 24 horas del día.
 
-![Dashboard de monitoreo remoto para granjas de minería Bitcoin](/images/blog/posts/monitoreo-remoto-hero.png)
+![Dashboard de monitoreo remoto para granjas de minería Bitcoin](/images/blog/posts/monitoreo-remoto-hero.webp)
 
 ## ¿Qué es el Monitoreo Remoto de Mineros?
 

@@ -5,13 +5,13 @@ date: 2024-03-05T00:00:00.000Z
 author: "Andes Solar Hash"
 category: "Casos de Éxito"
 tags: ["caso-de-exito", "roi", "hosting", "testimonios"]
-image: "/images/blog/posts/success-story-new.png"
+image: "/images/blog/posts/success-story-new.webp"
 published: true
 ---
 
 Compartimos la historia de éxito de uno de nuestros clientes, quien logró recuperar completamente su inversión en minería Bitcoin en solo 18 meses utilizando nuestro servicio de hosting profesional.
 
-![Dashboard de minería Bitcoin mostrando estadísticas en tiempo real](/images/blog/posts/mining-dashboard.png)
+![Dashboard de minería Bitcoin mostrando estadísticas en tiempo real](/images/blog/posts/mining-dashboard.webp)
 
 ## Perfil del Cliente
 
@@ -56,7 +56,7 @@ Nuestro cliente buscaba una forma de participar en el ecosistema Bitcoin sin la 
 ### Total Recuperado en 18 Meses
 **$25,620 USD** - Inversión inicial recuperada con excedente
 
-![Setup profesional de rigs de minería en data center](/images/blog/posts/mining-rig-setup.png)
+![Setup profesional de rigs de minería en data center](/images/blog/posts/mining-rig-setup.webp)
 
 ## Factores de Éxito
 

@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Seguridad"
 tags: ["seguridad", "datacenter", "proteccion", "fisica", "cibernetica"]
-image: "/images/blog/posts/seguridad-datacenter-hero.png"
+image: "/images/blog/posts/seguridad-datacenter-hero.webp"
 imageAlt: "Seguridad en data centers de minería - Protocolos de protección física y cibernética"
-ogImage: "/images/blog/posts/seguridad-datacenter-hero.png"
+ogImage: "/images/blog/posts/seguridad-datacenter-hero.webp"
 published: true
 featured: false
 readingTime: 8
@@ -21,7 +21,7 @@ La **seguridad en data centers de minería** representa una dimensión crítica 
 
 Este artículo examina los protocolos de seguridad que deben implementar los data centers serios, desde barreras físicas hasta ciberseguridad avanzada, proporcionando una checklist completa para evaluar la protección de tus activos mineros.
 
-![Seguridad integral en data centers de minería Bitcoin](/images/blog/posts/seguridad-datacenter-hero.png)
+![Seguridad integral en data centers de minería Bitcoin](/images/blog/posts/seguridad-datacenter-hero.webp)
 
 ## ¿Qué es la Seguridad en Data Centers de Minería?
 

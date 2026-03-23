@@ -5,13 +5,13 @@ date: 2024-03-10T00:00:00.000Z
 author: "Andes Solar Hash"
 category: "Productos"
 tags: ["antminer", "s21-xp", "asic", "equipos"]
-image: "/images/blog/posts/asic-miners-new.png"
+image: "/images/blog/posts/asic-miners-new.webp"
 published: true
 ---
 
 Bitmain ha lanzado el Antminer S21 XP, estableciendo un nuevo estándar en eficiencia energética para la minería de Bitcoin. En Andes Solar Hash, ya tenemos disponibles estos equipos para entrega inmediata en Chile.
 
-![Especificaciones técnicas del Antminer S21 XP - infografía](/images/blog/posts/s21-xp-specs.png)
+![Especificaciones técnicas del Antminer S21 XP - infografía](/images/blog/posts/s21-xp-specs.webp)
 
 ## Especificaciones Técnicas
 
@@ -41,7 +41,7 @@ Considerando nuestra tarifa energética de $0.088/kWh, el S21 XP ofrece:
 - Rentabilidad mensual superior al 8% (según precio actual de BTC)
 - Menor sensibilidad a fluctuaciones del precio de Bitcoin
 
-![Calculadora de rentabilidad de minería Bitcoin](/images/blog/posts/mining-profit-calc.png)
+![Calculadora de rentabilidad de minería Bitcoin](/images/blog/posts/mining-profit-calc.webp)
 
 ## Comparativa con Generaciones Anteriores
 

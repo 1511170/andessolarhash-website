@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Legal"
 tags: ["impuestos", "tributario", "legal", "chile", "sii"]
-image: "/images/blog/posts/impuestos-chile-hero.png"
+image: "/images/blog/posts/impuestos-chile-hero.webp"
 imageAlt: "Guía tributaria para minería de criptomonedas en Chile - Obligaciones ante el SII"
-ogImage: "/images/blog/posts/impuestos-chile-hero.png"
+ogImage: "/images/blog/posts/impuestos-chile-hero.webp"
 published: true
 featured: false
 readingTime: 11
@@ -21,7 +21,7 @@ La **tributación de la minería de criptomonedas en Chile** representa uno de l
 
 Esta guía completa analiza el marco tributario chileno aplicable a la minería de Bitcoin y otras criptomonedas, desde la clasificación de la actividad hasta el cálculo concreto de impuestos y las deducciones permitidas, proporcionando ejemplos prácticos actualizados al año tributario 2026.
 
-![Guía tributaria para minería de criptomonedas en Chile](/images/blog/posts/impuestos-chile-hero.png)
+![Guía tributaria para minería de criptomonedas en Chile](/images/blog/posts/impuestos-chile-hero.webp)
 
 ## Marco Legal y Tributario en Chile
 
@@ -64,7 +64,7 @@ Si eres persona natural sin contabilidad formal, los ingresos por venta de cript
 
 ## Guía de Declaración: Paso a Paso
 
-![Proceso de declaración de impuestos para minería de criptomonedas](/images/blog/posts/impuestos-guia.png)
+![Proceso de declaración de impuestos para minería de criptomonedas](/images/blog/posts/impuestos-guia.webp)
 
 ### Paso 1: Determinar Momento de Realización de Renta
 
@@ -103,7 +103,7 @@ Costo Base del BTC Minado =
 
 ## Deducciones y Gastos Aceptables
 
-![Deducciones permitidas para minería de criptomonedas](/images/blog/posts/impuestos-deducciones.png)
+![Deducciones permitidas para minería de criptomonedas](/images/blog/posts/impuestos-deducciones.webp)
 
 ### Deducciones Directas (Inmediatas)
 

@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Negocios"
 tags: ["negocio", "emprendimiento", "plan", "escalabilidad", "gestion"]
-image: "/images/blog/posts/mineria-negocio-hero.png"
+image: "/images/blog/posts/mineria-negocio-hero.webp"
 imageAlt: "Minería Bitcoin como negocio - Plan estratégico para granjas mineras profesionales"
-ogImage: "/images/blog/posts/mineria-negocio-hero.png"
+ogImage: "/images/blog/posts/mineria-negocio-hero.webp"
 published: true
 featured: false
 readingTime: 10
@@ -21,7 +21,7 @@ Transformar la **minería de Bitcoin en un negocio formal** representa la evoluc
 
 Esta guía proporciona un plan de negocios completo para emprendedores chilenos que buscan establecer o escalar una operación de minería Bitcoin profesional, cubriendo desde la constitución legal hasta la expansión internacional.
 
-![Minería Bitcoin como modelo de negocio profesional](/images/blog/posts/mineria-negocio-hero.png)
+![Minería Bitcoin como modelo de negocio profesional](/images/blog/posts/mineria-negocio-hero.webp)
 
 ## De Hobby a Negocio: El Cambio de Mindset
 
@@ -48,7 +48,7 @@ Considera constituir tu operación como negocio cuando:
 
 ## Plan de Negocios: Estructura Completa
 
-![Plan de negocios para empresa de minería Bitcoin](/images/blog/posts/negocio-plan.png)
+![Plan de negocios para empresa de minería Bitcoin](/images/blog/posts/negocio-plan.webp)
 
 ### 1. Resumen Ejecutivo
 
@@ -180,7 +180,7 @@ CEO
 
 ## Estrategias de Escalabilidad
 
-![Estrategias de escalabilidad para negocios de minería Bitcoin](/images/blog/posts/negocio-escalabilidad.png)
+![Estrategias de escalabilidad para negocios de minería Bitcoin](/images/blog/posts/negocio-escalabilidad.webp)
 
 ### Opción A: Escalabilidad Orgánica (Reinversión)
 

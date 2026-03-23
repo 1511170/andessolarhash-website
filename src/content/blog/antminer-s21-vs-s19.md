@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Productos"
 tags: ["antminer", "s21", "s19", "comparativa", "bitmain"]
-image: "/images/blog/posts/antminer-s21-vs-s19-hero.png"
+image: "/images/blog/posts/antminer-s21-vs-s19-hero.webp"
 imageAlt: "Comparativa visual entre Bitmain Antminer S21 y Antminer S19"
-ogImage: "/images/blog/posts/antminer-s21-vs-s19-hero.png"
+ogImage: "/images/blog/posts/antminer-s21-vs-s19-hero.webp"
 published: true
 featured: false
 readingTime: 12
@@ -21,7 +21,7 @@ La decisión entre el **Antminer S21 vs S19** es probablemente la más important
 
 Esta comparativa exhaustiva analizará cada aspecto técnico, económico y práctico para ayudarte a decidir cuál Antminer comprar según tu presupuesto, costos eléctricos y objetivos de inversión.
 
-![Comparativa Antminer S21 vs S19](/images/blog/posts/antminer-s21-vs-s19-hero.png)
+![Comparativa Antminer S21 vs S19](/images/blog/posts/antminer-s21-vs-s19-hero.webp)
 
 ## ¿Qué es el Antminer S21?
 
@@ -53,7 +53,7 @@ La serie **Antminer S19** ha sido el estándar de la industria desde 2020, con m
 | S19j Pro+ | 122 TH/s | 3,355W | 27.5 J/TH | 2022 |
 | S19k Pro | 120 TH/s | 2,760W | 23.0 J/TH | 2023 |
 
-![Especificaciones técnicas comparadas](/images/blog/posts/antminer-especificaciones.png)
+![Especificaciones técnicas comparadas](/images/blog/posts/antminer-especificaciones.webp)
 
 ## Comparativa Detallada S21 vs S19 XP
 
@@ -71,7 +71,7 @@ Compararemos directamente el S21 (234T) contra el mejor modelo S19, el XP (141T)
 
 ### Rendimiento Real
 
-![Comparativa de rendimiento](/images/blog/posts/antminer-rendimiento.png)
+![Comparativa de rendimiento](/images/blog/posts/antminer-rendimiento.webp)
 
 Con el hashrate de red actual (~720 EH/s) y precio BTC ~$65,000:
 

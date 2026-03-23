@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Tecnología"
 tags: ["dificultad", "red", "bitcoin", "tecnologia", "rentabilidad"]
-image: "/images/blog/posts/dificultad-red-bitcoin-hero.png"
+image: "/images/blog/posts/dificultad-red-bitcoin-hero.webp"
 imageAlt: "Concepto de dificultad de red Bitcoin y su impacto en minería"
-ogImage: "/images/blog/posts/dificultad-red-bitcoin-hero.png"
+ogImage: "/images/blog/posts/dificultad-red-bitcoin-hero.webp"
 published: true
 featured: false
 readingTime: 11
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/dificultad-red-bitcoin"
 
 Entender la **dificultad de red Bitcoin** es fundamental para cualquier minero que desee proyectar sus ganancias y tomar decisiones informadas sobre inversión en hardware. Esta métrica, que muchos principiantes pasan por alto, determina directamente cuánto Bitcoin ganarás con tus equipos y cómo evolucionará tu rentabilidad a lo largo del tiempo.
 
-![Concepto de dificultad de red Bitcoin](/images/blog/posts/dificultad-red-bitcoin-hero.png)
+![Concepto de dificultad de red Bitcoin](/images/blog/posts/dificultad-red-bitcoin-hero.webp)
 
 ## ¿Qué es la Dificultad de Red Bitcoin?
 
@@ -39,7 +39,7 @@ Si los mineros son más rápidos y los bloques se generan en menos de 10 minutos
 
 La dificultad se expresa como un número entero sin unidades específicas. En marzo de 2026, la dificultad de red se encuentra alrededor de **83 billones** (83T), un número que representa la dificultad relativa de encontrar un hash por debajo del objetivo establecido.
 
-![Historia de la dificultad de red Bitcoin](/images/blog/posts/dificultad-red-historia.png)
+![Historia de la dificultad de red Bitcoin](/images/blog/posts/dificultad-red-historia.webp)
 
 ## Cómo la Dificultad Afecta tus Ganancias
 
@@ -68,7 +68,7 @@ Donde:
 
 Cada aproximadamente 4 años, el **halving** reduce a la mitad las recompensas por bloque. El último ocurrió en abril de 2024, reduciendo las recompensas de 6.25 a **3.125 BTC por bloque**. Este evento, combinado con el aumento constante de dificultad, presiona a los mineros menos eficientes a salir del mercado.
 
-![Efecto de dificultad en ganancias de minería](/images/blog/posts/dificultad-red-efecto.png)
+![Efecto de dificultad en ganancias de minería](/images/blog/posts/dificultad-red-efecto.webp)
 
 ## Beneficios del Sistema de Dificultad
 

@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Tecnología"
 tags: ["asic", "gpu", "comparativa", "hardware", "rentabilidad"]
-image: "/images/blog/posts/asic-vs-gpu-hero.png"
+image: "/images/blog/posts/asic-vs-gpu-hero.webp"
 imageAlt: "Comparativa entre hardware ASIC y GPU para minería de Bitcoin"
-ogImage: "/images/blog/posts/asic-vs-gpu-hero.png"
+ogImage: "/images/blog/posts/asic-vs-gpu-hero.webp"
 published: true
 featured: false
 readingTime: 10
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/asic-vs-gpu-mineria"
 
 La pregunta **ASIC vs GPU** es una de las más frecuentes entre quienes desean iniciar en la minería de criptomonedas. Si te estás preguntando qué es mejor ASIC o GPU para minar Bitcoin, esta comparativa completa te ayudará a tomar una decisión informada basada en datos reales de 2026. Entender las diferencias fundamentales entre estos dos tipos de hardware es crucial para maximizar tu rentabilidad y minimizar riesgos.
 
-![Comparativa ASIC vs GPU para minería](/images/blog/posts/asic-vs-gpu-hero.png)
+![Comparativa ASIC vs GPU para minería](/images/blog/posts/asic-vs-gpu-hero.webp)
 
 ## ¿Qué es la Minería con ASIC?
 
@@ -47,7 +47,7 @@ Las **GPUs (Graphics Processing Units)** son procesadores de tarjetas gráficas 
 
 Las GPUs populares para minería incluyen NVIDIA RTX 4090, RTX 3090 Ti y AMD RX 7900 XTX.
 
-![Diagrama comparativo ASIC vs GPU](/images/blog/posts/asic-vs-gpu-diagrama.png)
+![Diagrama comparativo ASIC vs GPU](/images/blog/posts/asic-vs-gpu-diagrama.webp)
 
 ## Comparativa ASIC vs GPU: Análisis Detallado
 
@@ -82,7 +82,7 @@ Las GPUs populares para minería incluyen NVIDIA RTX 4090, RTX 3090 Ti y AMD RX 
 | Uso alternativo | Ninguno | Gaming, renderizado, IA |
 | Actualización | Reemplazo completo | Incremental |
 
-![Análisis de ROI ASIC vs GPU](/images/blog/posts/asic-vs-gpu-roi.png)
+![Análisis de ROI ASIC vs GPU](/images/blog/posts/asic-vs-gpu-roi.webp)
 
 ## Beneficios de Cada Tecnología
 

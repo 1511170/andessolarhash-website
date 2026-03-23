@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Historia"
 tags: ["bitmain", "antminer", "historia", "asic", "evolucion"]
-image: "/images/blog/posts/bitmain-historia-hero.png"
+image: "/images/blog/posts/bitmain-historia-hero.webp"
 imageAlt: "Evolución histórica de los equipos Antminer de Bitmain"
-ogImage: "/images/blog/posts/bitmain-historia-hero.png"
+ogImage: "/images/blog/posts/bitmain-historia-hero.webp"
 published: true
 featured: false
 readingTime: 13
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/bitmain-antminer-historia"
 
 La historia de **Bitmain y Antminer** está intrínsecamente ligada a la propia historia de la minería de Bitcoin. Desde sus humildes comienzos en 2013 hasta convertirse en el gigante indiscutible de la industria de hardware de minería, Bitmain ha revolucionado repetidamente el panorama con innovaciones que han definido estándares y moldeado la descentralización de la red Bitcoin. Este viaje histórico te llevará desde el primer Antminer hasta los impresionantes equipos de última generación.
 
-![Historia de Bitmain y Antminer](/images/blog/posts/bitmain-historia-hero.png)
+![Historia de Bitmain y Antminer](/images/blog/posts/bitmain-historia-hero.webp)
 
 ## Los Orígenes de Bitmain
 
@@ -69,7 +69,7 @@ El S9 se mantuvo rentable durante casi 6 años, algo impensable en la industria 
 
 Con la llegada de competidores como MicroBT (Whatsminer) y Canaan (AvalonMiner), Bitmain respondió con la serie S17 y posteriormente S19, utilizando procesos de fabricación de 7nm.
 
-![Modelos históricos de Antminer](/images/blog/posts/bitmain-modelos.png)
+![Modelos históricos de Antminer](/images/blog/posts/bitmain-modelos.webp)
 
 ### Evolución de la Serie S19
 
@@ -109,7 +109,7 @@ La evolución de los procesos de fabricación ha sido el motor de la mejora en e
 | 5ª Gen | 5nm | 21.5 J/TH | 2022 |
 | 6ª Gen | 3nm | 15.0 J/TH | 2023 |
 
-![Instalación de fabricación Bitmain](/images/blog/posts/bitmain-fabrica.png)
+![Instalación de fabricación Bitmain](/images/blog/posts/bitmain-fabrica.webp)
 
 ## Los Mejores Modelos de la Historia
 

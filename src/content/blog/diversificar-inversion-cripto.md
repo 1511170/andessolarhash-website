@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Inversión"
 tags: ["diversificacion", "inversion", "estrategia", "portafolio", "riesgo"]
-image: "/images/blog/posts/diversificar-crypto-hero.png"
+image: "/images/blog/posts/diversificar-crypto-hero.webp"
 imageAlt: "Estrategia de diversificación de inversión en criptomonedas - Minería, Trading y Holding"
-ogImage: "/images/blog/posts/diversificar-crypto-hero.png"
+ogImage: "/images/blog/posts/diversificar-crypto-hero.webp"
 published: true
 featured: false
 readingTime: 9
@@ -21,7 +21,7 @@ La **diversificación de inversión en criptomonedas** representa la piedra angu
 
 Esta guía profundiza en cómo construir un portafolio cripto diversificado que maximice el upside potencial mientras se protege contra la volatilidad inherente del mercado.
 
-![Estrategia de diversificación en criptomonedas: Minería, Trading y Holding](/images/blog/posts/diversificar-crypto-hero.png)
+![Estrategia de diversificación en criptomonedas: Minería, Trading y Holding](/images/blog/posts/diversificar-crypto-hero.webp)
 
 ## Los Tres Pilares de la Inversión Crypto
 
@@ -62,7 +62,7 @@ El holding (HODLing) es la estrategia de acumulación simple, confiando en la ap
 
 ## Construcción del Portafolio Óptimo
 
-![Estructura de portafolio diversificado en criptomonedas](/images/blog/posts/diversificar-portafolio.png)
+![Estructura de portafolio diversificado en criptomonedas](/images/blog/posts/diversificar-portafolio.webp)
 
 ### Asignación Estratégica por Perfil de Riesgo
 

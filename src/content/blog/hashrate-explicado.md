@@ -6,9 +6,9 @@ modifiedDate: 2026-03-22T08:00:00.000Z
 author: "Andes Solar Hash"
 category: "Educación"
 tags: ["hashrate", "educacion", "bitcoin", "mineria", "terminologia"]
-image: "/images/blog/posts/hashrate-explicado-hero.png"
+image: "/images/blog/posts/hashrate-explicado-hero.webp"
 imageAlt: "Concepto de hashrate en minería Bitcoin explicado visualmente"
-ogImage: "/images/blog/posts/hashrate-explicado-hero.png"
+ogImage: "/images/blog/posts/hashrate-explicado-hero.webp"
 published: true
 featured: false
 readingTime: 9
@@ -19,7 +19,7 @@ canonical: "https://andessolarhash.com/blog/hashrate-explicado"
 
 El **hashrate** es posiblemente el concepto más importante que debes entender si estás interesado en la minería de Bitcoin. Ya sea que estés evaluando un equipo ASIC, analizando la salud de la red Bitcoin o calculando tu rentabilidad potencial, el hashrate es la métrica fundamental que determina todo. Esta guía completa te explicará exactamente qué es el hashrate, cómo se mide y por qué es crucial para tu éxito como minero.
 
-![Concepto de hashrate en minería Bitcoin](/images/blog/posts/hashrate-explicado-hero.png)
+![Concepto de hashrate en minería Bitcoin](/images/blog/posts/hashrate-explicado-hero.webp)
 
 ## ¿Qué es el Hashrate?
 
