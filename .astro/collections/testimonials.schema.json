@@ -1,0 +1,58 @@
+{
+  "$ref": "#/definitions/testimonials",
+  "definitions": {
+    "testimonials": {
+      "type": "object",
+      "properties": {
+        "author": {
+          "type": "string"
+        },
+        "company": {
+          "type": "string"
+        },
+        "quote": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "rating": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 5,
+          "default": 5
+        },
+        "date": {
+          "type": "string"
+        },
+        "published": {
+          "type": "boolean",
+          "default": true
+        },
+        "verified": {
+          "type": "boolean",
+          "default": false
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "google",
+            "trustpilot",
+            "direct",
+            "other"
+          ],
+          "default": "direct"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "author",
+        "quote"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

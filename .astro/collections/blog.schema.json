@@ -1,0 +1,185 @@
+{
+  "$ref": "#/definitions/blog",
+  "definitions": {
+    "blog": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "maxLength": 70,
+          "errorMessage": {
+            "maxLength": "El título debe tener máximo 70 caracteres para SEO"
+          }
+        },
+        "excerpt": {
+          "type": "string",
+          "maxLength": 160,
+          "errorMessage": {
+            "maxLength": "El excerpt debe tener máximo 160 caracteres para SEO"
+          }
+        },
+        "date": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "modifiedDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "author": {
+          "type": "string",
+          "default": "Andes Solar Hash"
+        },
+        "category": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 10,
+          "errorMessage": {
+            "maxItems": "Máximo 10 tags recomendados"
+          }
+        },
+        "image": {
+          "type": "string"
+        },
+        "imageAlt": {
+          "type": "string"
+        },
+        "ogImage": {
+          "type": "string"
+        },
+        "canonical": {
+          "type": "string",
+          "format": "uri"
+        },
+        "metaTitle": {
+          "type": "string",
+          "maxLength": 60
+        },
+        "metaDescription": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "published": {
+          "type": "boolean",
+          "default": true
+        },
+        "featured": {
+          "type": "boolean",
+          "default": false
+        },
+        "readingTime": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 60
+        },
+        "articleSection": {
+          "type": "string"
+        },
+        "wordCount": {
+          "type": "number"
+        },
+        "primarySources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "description": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "url"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "expertiseLevel": {
+          "type": "string",
+          "enum": [
+            "principiante",
+            "intermedio",
+            "avanzado"
+          ],
+          "default": "intermedio"
+        },
+        "reviewedBy": {
+          "type": "string"
+        },
+        "reviewDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "integer",
+              "format": "unix-time"
+            }
+          ]
+        },
+        "enableComments": {
+          "type": "boolean",
+          "default": false
+        },
+        "relatedPosts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "excerpt",
+        "date",
+        "category"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

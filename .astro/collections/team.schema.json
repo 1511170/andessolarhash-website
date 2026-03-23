@@ -1,0 +1,58 @@
+{
+  "$ref": "#/definitions/team",
+  "definitions": {
+    "team": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "bio": {
+          "type": "string"
+        },
+        "image": {
+          "type": "string"
+        },
+        "linkedin": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number",
+          "default": 0
+        },
+        "published": {
+          "type": "boolean",
+          "default": true
+        },
+        "credentials": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expertise": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "position",
+        "bio"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

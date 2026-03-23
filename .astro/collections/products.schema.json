@@ -1,0 +1,104 @@
+{
+  "$ref": "#/definitions/products",
+  "definitions": {
+    "products": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "manufacturer": {
+          "type": "string",
+          "default": "Bitmain"
+        },
+        "hashrate": {
+          "type": "string"
+        },
+        "powerConsumption": {
+          "type": "string"
+        },
+        "efficiency": {
+          "type": "string"
+        },
+        "algorithm": {
+          "type": "string",
+          "default": "SHA-256"
+        },
+        "price": {
+          "type": "number"
+        },
+        "priceCurrency": {
+          "type": "string",
+          "default": "USD"
+        },
+        "availability": {
+          "type": "string",
+          "enum": [
+            "in_stock",
+            "out_of_stock",
+            "pre_order"
+          ],
+          "default": "in_stock"
+        },
+        "shortDescription": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "images": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mainImage": {
+          "type": "string"
+        },
+        "metaTitle": {
+          "type": "string"
+        },
+        "metaDescription": {
+          "type": "string"
+        },
+        "relatedProducts": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "featured": {
+          "type": "boolean",
+          "default": false
+        },
+        "published": {
+          "type": "boolean",
+          "default": true
+        },
+        "order": {
+          "type": "number",
+          "default": 0
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "model",
+        "hashrate",
+        "powerConsumption",
+        "efficiency",
+        "price",
+        "shortDescription",
+        "description",
+        "mainImage"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
