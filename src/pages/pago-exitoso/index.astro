@@ -2,21 +2,33 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Mensaje Enviado | Andes Solar Hash" description="Gracias por contactarnos. Tu mensaje ha sido enviado exitosamente.">
-  <section class="thank-you-section">
-    <div class="thank-you-container">
+<Layout title="Pago Exitoso | Andes Solar Hash" description="Tu pago ha sido procesado exitosamente. Gracias por tu compra en Andes Solar Hash.">
+  <section class="success-section">
+    <div class="success-container">
       <div class="success-icon">
         <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <path d="M9 12l2 2 4-4"></path>
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
         </svg>
       </div>
       
-      <h1>¡Mensaje Enviado!</h1>
-      <p class="subtitle">Gracias por contactarnos</p>
+      <h1>¡Pago Exitoso!</h1>
+      <p class="subtitle">Tu compra ha sido procesada correctamente</p>
       
       <div class="message-box">
-        <p>Tu mensaje ha sido recibido exitosamente. Nuestro equipo revisará tu consulta y te responderá en un plazo de <strong>24 horas hábiles</strong>.</p>
+        <p>Gracias por tu compra en Andes Solar Hash. Hemos recibido tu pago y nuestro equipo comenzará a procesar tu pedido de inmediato.</p>
+        
+        <div class="info-highlight">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <div>
+            <strong>¿Qué sigue?</strong>
+            <span>Recibirás un correo de confirmación con los detalles de tu compra y los pasos siguientes.</span>
+          </div>
+        </div>
         
         <div class="contact-info">
           <div class="info-item">
@@ -24,14 +36,14 @@ import Layout from '../../layouts/Layout.astro';
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            <span>soporte@andessolarhash.com</span>
+            <span>ventas@andessolarhash.com</span>
           </div>
           <div class="info-item">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-            <span>Lunes a Viernes, 9:00 - 18:00 CLT</span>
+            <span>Respuesta en 24 horas hábiles</span>
           </div>
         </div>
       </div>
@@ -45,12 +57,12 @@ import Layout from '../../layouts/Layout.astro';
           Volver al Inicio
         </a>
         <a href="/productos/" class="btn-secondary">
-          Explorar Productos
+          Ver Más Productos
         </a>
       </div>
       
       <div class="social-section">
-        <p>Síguenos en nuestras redes sociales</p>
+        <p>Únete a nuestra comunidad</p>
         <div class="social-links">
           <a href="https://discord.gg/5QgMxGET" target="_blank" rel="noopener noreferrer" aria-label="Discord">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -78,7 +90,7 @@ import Layout from '../../layouts/Layout.astro';
   </section>
 
   <style>
-    .thank-you-section {
+    .success-section {
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -87,7 +99,7 @@ import Layout from '../../layouts/Layout.astro';
       background: linear-gradient(135deg, var(--bg-deep) 0%, var(--bg-mid) 50%, rgba(29, 34, 66, 0.9) 100%);
     }
 
-    .thank-you-container {
+    .success-container {
       max-width: 600px;
       width: 100%;
       text-align: center;
@@ -154,6 +166,41 @@ import Layout from '../../layouts/Layout.astro';
 
     .message-box strong {
       color: var(--gold);
+    }
+
+    .info-highlight {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: rgba(247, 173, 31, 0.08);
+      border: 1px solid rgba(247, 173, 31, 0.2);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .info-highlight svg {
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-highlight div {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .info-highlight strong {
+      color: var(--gold);
+      font-size: 14px;
+    }
+
+    .info-highlight span {
+      color: var(--text-light);
+      font-size: 14px;
+      line-height: 1.5;
     }
 
     .contact-info {
@@ -257,7 +304,7 @@ import Layout from '../../layouts/Layout.astro';
     }
 
     @media (max-width: 480px) {
-      .thank-you-section {
+      .success-section {
         padding: 100px 20px 60px;
       }
 
@@ -268,6 +315,15 @@ import Layout from '../../layouts/Layout.astro';
 
       .message-box {
         padding: 24px;
+      }
+
+      .info-highlight {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-highlight svg {
+        margin: 0 auto;
       }
 
       .actions {

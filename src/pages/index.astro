@@ -268,8 +268,10 @@ try {
     .hero-bg {
       position: absolute;
       inset: 0;
-      background: url('/images/home/hero/hero_background.webp') center/cover no-repeat;
-      opacity: 0.6;
+      background: url('/images/home/hero/hero_background.webp') center/contain no-repeat;
+      opacity: 0.8;
+      background-position: right center;
+      background-size: 65% auto;
     }
     .hero-gradient {
       position: absolute;
@@ -692,7 +694,7 @@ try {
     /* Responsive */
     @media (max-width: 1024px) {
       .hero { padding: 100px 40px 60px; }
-      .hero-bg { opacity: 0.4; }
+      .hero-bg { opacity: 0.6; background-size: 75% auto; background-position: center right; }
       .intro { padding: 60px 40px; }
       .products { padding: 40px 40px 60px; }
       .featured { padding: 60px 40px; }
@@ -710,7 +712,7 @@ try {
         padding: 100px 20px 60px;
         align-items: flex-start;
       }
-      .hero-bg { opacity: 0.3; }
+      .hero-bg { opacity: 0.5; background-size: 90% auto; background-position: center top 20%; }
       .hero-overlay {
         background: linear-gradient(to bottom, rgba(11,13,27,0.55) 0%, rgba(11,13,27,0.3) 50%, rgba(11,13,27,0.7) 100%);
       }
